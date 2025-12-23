@@ -46,6 +46,7 @@ export const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
+            className="relative -top-6 sm:-top-8"
           >
             <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium bg-primary/10 text-primary border border-primary/20 mb-8">
               <Sparkles className="w-4 h-4" />
@@ -53,30 +54,11 @@ export const HeroSection = () => {
             </span>
           </motion.div>
 
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6"
-          >
-            Build Intelligent Systems{" "}
-            <span className="text-gradient">That Scale</span>
-          </motion.h1>
-
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto"
-          >
-            We design and deploy AI agents, automation systems, and digital products that drive measurable business growth.
-          </motion.p>
-
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center"
+            className="relative top-6 sm:top-8 flex flex-col sm:flex-row gap-4 justify-center"
           >
             <Button asChild variant="hero" size="xl">
               <Link to="/contact">
