@@ -6,10 +6,18 @@ import { Button } from "@/components/ui/button";
 export const HeroSection = () => {
   return (
     <section className="relative min-h-[90vh] flex items-center overflow-hidden">
-      {/* Background Effects */}
-      <div className="absolute inset-0 bg-grid-pattern opacity-30" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-primary/10 blur-[120px] animate-pulse-glow" />
-      <div className="absolute top-1/4 right-1/4 w-[400px] h-[400px] rounded-full bg-secondary/20 blur-[100px]" />
+      {/* Video Background */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover"
+      >
+        <source src="/videos/hero-background.mp4" type="video/mp4" />
+      </video>
+      {/* Overlay for better text readability */}
+      <div className="absolute inset-0 bg-background/40" />
       
       {/* Floating Elements */}
       <motion.div
