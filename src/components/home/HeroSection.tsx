@@ -46,7 +46,7 @@ export const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="relative -top-6 sm:-top-8"
+            className="-translate-y-8 sm:-translate-y-10"
           >
             <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium bg-primary/10 text-primary border border-primary/20 mb-8">
               <Sparkles className="w-4 h-4" />
@@ -58,7 +58,7 @@ export const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="relative top-6 sm:top-8 flex flex-col sm:flex-row gap-4 justify-center"
+            className="translate-y-10 sm:translate-y-14 flex flex-col sm:flex-row gap-4 justify-center"
           >
             <Button asChild variant="hero" size="xl">
               <Link to="/contact">
