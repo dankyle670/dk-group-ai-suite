@@ -40,8 +40,8 @@ export const HeroSection = () => {
         </div>
       </motion.div>
 
-      <div className="container-custom relative z-10 min-h-[90vh] flex">
-        <div className="max-w-4xl mx-auto text-center w-full flex flex-col items-center">
+      <div className="container-custom relative z-10 min-h-[90vh]">
+        <div className="max-w-4xl mx-auto text-center w-full min-h-[90vh] relative">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -58,7 +58,7 @@ export const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="mt-auto pb-20 sm:pb-24 flex flex-col sm:flex-row gap-4 justify-center"
+            className="absolute inset-x-0 bottom-16 sm:bottom-20 md:bottom-24 flex flex-col sm:flex-row gap-4 justify-center"
           >
             <Button asChild variant="hero" size="xl">
               <Link to="/contact">
