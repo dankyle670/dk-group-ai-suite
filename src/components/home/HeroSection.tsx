@@ -58,7 +58,7 @@ export const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="absolute inset-x-0 bottom-6 sm:bottom-8 md:bottom-10 flex flex-col sm:flex-row gap-4 justify-center"
+            className="absolute inset-x-0 bottom-1 sm:bottom-2 md:bottom-4 flex flex-col sm:flex-row gap-4 justify-center"
           >
             <Button asChild variant="hero" size="xl">
               <Link to="/contact">
