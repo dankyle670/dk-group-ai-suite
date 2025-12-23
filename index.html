@@ -15,6 +15,18 @@
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
   </head>
   <body>
+    <!-- Netlify Forms (hidden form to enable form detection in SPA builds) -->
+    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="contact" />
+      <input type="hidden" name="subject" data-remove-prefix value="New lead from %{formName} (%{submissionId})" />
+      <input name="bot-field" />
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <input type="text" name="company" />
+      <input type="text" name="topic" />
+      <textarea name="message"></textarea>
+    </form>
+
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
