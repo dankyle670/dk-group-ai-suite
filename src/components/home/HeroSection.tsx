@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowRight, Bot, Sparkles } from "lucide-react";
@@ -7,28 +7,7 @@ import { useTranslation } from "react-i18next";
 
 export const HeroSection = () => {
   const videoRef = useRef<HTMLVideoElement | null>(null);
-  const [isLoopFading, setIsLoopFading] = useState(false);
   const { t } = useTranslation();
-
-  useEffect(() => {
-    const videoEl = videoRef.current;
-    if (!videoEl) return;
-
-    let rafId = 0;
-
-    const tick = () => {
-      const duration = videoEl.duration;
-      if (Number.isFinite(duration) && duration > 0) {
-        const remaining = duration - videoEl.currentTime;
-        // Fade right before the loop to hide the "jump"
-        setIsLoopFading(remaining > 0 && remaining < 0.12);
-      }
-      rafId = window.requestAnimationFrame(tick);
-    };
-
-    rafId = window.requestAnimationFrame(tick);
-    return () => window.cancelAnimationFrame(rafId);
-  }, []);
 
   return (
     <section className="relative min-h-[calc(100svh-5rem)] overflow-hidden">
@@ -44,13 +23,8 @@ export const HeroSection = () => {
       >
         <source src="/videos/hero-background.mp4" type="video/mp4" />
       </video>
-      {/* Subtle overlay for text readability + micro-fade at loop */}
-      <div
-        className={[
-          "absolute inset-0 bg-background transition-opacity duration-150",
-          isLoopFading ? "opacity-80" : "opacity-20",
-        ].join(" ")}
-      />
+      {/* Subtle overlay for text readability */}
+      <div className="absolute inset-0 bg-background/20" />
       
       {/* Floating Elements */}
       <motion.div
