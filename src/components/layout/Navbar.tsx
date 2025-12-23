@@ -3,21 +3,24 @@ import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import Logo from "@/assets/logo.svg";
+import { useTranslation } from "react-i18next";
 
 const navLinks = [
-  { name: "Home", path: "/" },
-  { name: "AI Solutions", path: "/ai-solutions" },
-  { name: "Web", path: "/web-development" },
-  { name: "Mobile", path: "/mobile-development" },
-  { name: "Data", path: "/data-solutions" },
-  { name: "Design", path: "/design-solutions" },
-  { name: "Pricing", path: "/pricing" },
-  { name: "About", path: "/about" },
+  { key: "nav.home", path: "/" },
+  { key: "nav.aiSolutions", path: "/ai-solutions" },
+  { key: "nav.web", path: "/web-development" },
+  { key: "nav.mobile", path: "/mobile-development" },
+  { key: "nav.data", path: "/data-solutions" },
+  { key: "nav.design", path: "/design-solutions" },
+  { key: "nav.pricing", path: "/pricing" },
+  { key: "nav.about", path: "/about" },
 ];
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
+  const { t, i18n } = useTranslation();
+  const currentLng = i18n.resolvedLanguage ?? i18n.language;
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border/50">
@@ -41,18 +44,42 @@ export const Navbar = () => {
                     : "text-muted-foreground hover:text-foreground hover:bg-muted/50"
                 }`}
               >
-                {link.name}
+                {t(link.key)}
               </Link>
             ))}
           </div>
 
           {/* CTA Buttons */}
           <div className="hidden lg:flex items-center gap-4">
+            <div className="flex items-center gap-1 rounded-lg border border-border/60 bg-background/40 p-1">
+              <button
+                type="button"
+                onClick={() => i18n.changeLanguage("fr")}
+                className={`px-2.5 py-1 rounded-md text-xs font-semibold transition-colors ${
+                  currentLng?.startsWith("fr")
+                    ? "bg-primary text-primary-foreground"
+                    : "text-muted-foreground hover:text-foreground"
+                }`}
+              >
+                FR
+              </button>
+              <button
+                type="button"
+                onClick={() => i18n.changeLanguage("en")}
+                className={`px-2.5 py-1 rounded-md text-xs font-semibold transition-colors ${
+                  currentLng?.startsWith("en")
+                    ? "bg-primary text-primary-foreground"
+                    : "text-muted-foreground hover:text-foreground"
+                }`}
+              >
+                EN
+              </button>
+            </div>
             <Link
               to="/contact"
               className="px-5 py-2.5 rounded-lg text-sm font-medium bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-200 shadow-lg shadow-primary/25"
             >
-              Talk to an Expert
+              {t("cta.talkToExpert")}
             </Link>
           </div>
 
@@ -76,6 +103,33 @@ export const Navbar = () => {
             className="lg:hidden bg-background border-b border-border"
           >
             <div className="container-custom py-4 space-y-2">
+              <div className="flex items-center justify-between px-4 pb-2">
+                <span className="text-xs font-semibold text-muted-foreground">{t("language.label")}</span>
+                <div className="flex items-center gap-1 rounded-lg border border-border/60 bg-background/40 p-1">
+                  <button
+                    type="button"
+                    onClick={() => i18n.changeLanguage("fr")}
+                    className={`px-2.5 py-1 rounded-md text-xs font-semibold transition-colors ${
+                      currentLng?.startsWith("fr")
+                        ? "bg-primary text-primary-foreground"
+                        : "text-muted-foreground hover:text-foreground"
+                    }`}
+                  >
+                    FR
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => i18n.changeLanguage("en")}
+                    className={`px-2.5 py-1 rounded-md text-xs font-semibold transition-colors ${
+                      currentLng?.startsWith("en")
+                        ? "bg-primary text-primary-foreground"
+                        : "text-muted-foreground hover:text-foreground"
+                    }`}
+                  >
+                    EN
+                  </button>
+                </div>
+              </div>
               {navLinks.map((link) => (
                 <Link
                   key={link.path}
@@ -87,7 +141,7 @@ export const Navbar = () => {
                       : "text-muted-foreground hover:text-foreground hover:bg-muted/50"
                   }`}
                 >
-                  {link.name}
+                  {t(link.key)}
                 </Link>
               ))}
               <Link
@@ -95,7 +149,7 @@ export const Navbar = () => {
                 onClick={() => setIsOpen(false)}
                 className="block mt-4 px-4 py-3 rounded-lg text-sm font-medium bg-primary text-primary-foreground text-center"
               >
-                Talk to an Expert
+                {t("cta.talkToExpert")}
               </Link>
             </div>
           </motion.div>

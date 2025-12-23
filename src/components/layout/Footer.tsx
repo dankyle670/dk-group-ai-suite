@@ -1,27 +1,30 @@
 import { Link } from "react-router-dom";
 import Logo from "@/assets/logo.svg";
-
-const footerLinks = {
-  solutions: [
-    { name: "AI Solutions", path: "/ai-solutions" },
-    { name: "Web Development", path: "/web-development" },
-    { name: "Mobile Development", path: "/mobile-development" },
-    { name: "Data Solutions", path: "/data-solutions" },
-    { name: "Design Solutions", path: "/design-solutions" },
-  ],
-  company: [
-    { name: "About", path: "/about" },
-    { name: "Pricing", path: "/pricing" },
-    { name: "DK Agents", path: "/dk-agents" },
-    { name: "Contact", path: "/contact" },
-  ],
-  legal: [
-    { name: "Privacy Policy", path: "/privacy" },
-    { name: "Terms of Service", path: "/terms" },
-  ],
-};
+import { useTranslation } from "react-i18next";
 
 export const Footer = () => {
+  const { t } = useTranslation();
+
+  const footerLinks = {
+    solutions: [
+      { name: t("nav.aiSolutions"), path: "/ai-solutions" },
+      { name: t("solutions.webDevelopment"), path: "/web-development" },
+      { name: t("solutions.mobileDevelopment"), path: "/mobile-development" },
+      { name: t("solutions.dataSolutions"), path: "/data-solutions" },
+      { name: t("solutions.designSolutions"), path: "/design-solutions" },
+    ],
+    company: [
+      { name: t("nav.about"), path: "/about" },
+      { name: t("nav.pricing"), path: "/pricing" },
+      { name: t("nav.dkAgents"), path: "/dk-agents" },
+      { name: t("nav.contact"), path: "/contact" },
+    ],
+    legal: [
+      { name: t("footer.privacyPolicy"), path: "/privacy" },
+      { name: t("footer.termsOfService"), path: "/terms" },
+    ],
+  };
+
   return (
     <footer className="bg-card border-t border-border">
       <div className="container-custom py-16">
@@ -33,13 +36,13 @@ export const Footer = () => {
               <span className="text-xl font-semibold">GROUP</span>
             </Link>
             <p className="text-muted-foreground text-sm leading-relaxed">
-              Building AI-powered systems that scale your business. Your long-term technology partner.
+              {t("footer.brandBlurb")}
             </p>
           </div>
 
           {/* Solutions */}
           <div>
-            <h4 className="font-semibold mb-4 text-foreground">Solutions</h4>
+            <h4 className="font-semibold mb-4 text-foreground">{t("footer.solutions")}</h4>
             <ul className="space-y-3">
               {footerLinks.solutions.map((link) => (
                 <li key={link.path}>
@@ -56,7 +59,7 @@ export const Footer = () => {
 
           {/* Company */}
           <div>
-            <h4 className="font-semibold mb-4 text-foreground">Company</h4>
+            <h4 className="font-semibold mb-4 text-foreground">{t("footer.company")}</h4>
             <ul className="space-y-3">
               {footerLinks.company.map((link) => (
                 <li key={link.path}>
@@ -73,22 +76,22 @@ export const Footer = () => {
 
           {/* Contact */}
           <div>
-            <h4 className="font-semibold mb-4 text-foreground">Get in Touch</h4>
+            <h4 className="font-semibold mb-4 text-foreground">{t("footer.getInTouch")}</h4>
             <p className="text-sm text-muted-foreground mb-4">
-              Ready to transform your business with AI?
+              {t("footer.getInTouchBlurb")}
             </p>
             <Link
               to="/contact"
               className="inline-flex px-5 py-2.5 rounded-lg text-sm font-medium bg-primary text-primary-foreground hover:bg-primary/90 transition-all"
             >
-              Contact Us
+              {t("footer.contactUs")}
             </Link>
           </div>
         </div>
 
         <div className="border-t border-border mt-12 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} DK Group. All rights reserved.
+            © {new Date().getFullYear()} DK Group. {t("footer.allRightsReserved")}
           </p>
           <div className="flex gap-6">
             {footerLinks.legal.map((link) => (

@@ -1,0 +1,42 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "aiSolutions": "Solutions IA",
+    "web": "Web",
+    "mobile": "Mobile",
+    "data": "Données",
+    "design": "Design",
+    "pricing": "Tarifs",
+    "about": "À propos",
+    "dkAgents": "Agents DK",
+    "contact": "Contact"
+  },
+  "cta": {
+    "talkToExpert": "Parler à un expert",
+    "talkToAiExpert": "Parler à un expert IA",
+    "exploreAiSolutions": "Explorer les solutions IA"
+  },
+  "hero": {
+    "badge": "Solutions digitales orientées IA"
+  },
+  "footer": {
+    "brandBlurb": "Nous concevons des systèmes IA qui font grandir votre business. Votre partenaire technologique sur le long terme.",
+    "solutions": "Solutions",
+    "company": "Entreprise",
+    "getInTouch": "Contact",
+    "getInTouchBlurb": "Prêt à transformer votre activité grâce à l’IA ?",
+    "contactUs": "Nous contacter",
+    "privacyPolicy": "Politique de confidentialité",
+    "termsOfService": "Conditions d’utilisation",
+    "allRightsReserved": "Tous droits réservés."
+  },
+  "solutions": {
+    "webDevelopment": "Développement web",
+    "mobileDevelopment": "Développement mobile",
+    "dataSolutions": "Solutions data",
+    "designSolutions": "Solutions design"
+  },
+  "language": {
+    "label": "Langue"
+  }
+}

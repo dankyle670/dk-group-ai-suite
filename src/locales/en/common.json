@@ -1,0 +1,42 @@
+{
+  "nav": {
+    "home": "Home",
+    "aiSolutions": "AI Solutions",
+    "web": "Web",
+    "mobile": "Mobile",
+    "data": "Data",
+    "design": "Design",
+    "pricing": "Pricing",
+    "about": "About",
+    "dkAgents": "DK Agents",
+    "contact": "Contact"
+  },
+  "cta": {
+    "talkToExpert": "Talk to an Expert",
+    "talkToAiExpert": "Talk to an AI Expert",
+    "exploreAiSolutions": "Explore AI Solutions"
+  },
+  "hero": {
+    "badge": "AI-First Digital Solutions"
+  },
+  "footer": {
+    "brandBlurb": "Building AI-powered systems that scale your business. Your long-term technology partner.",
+    "solutions": "Solutions",
+    "company": "Company",
+    "getInTouch": "Get in Touch",
+    "getInTouchBlurb": "Ready to transform your business with AI?",
+    "contactUs": "Contact Us",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "allRightsReserved": "All rights reserved."
+  },
+  "solutions": {
+    "webDevelopment": "Web Development",
+    "mobileDevelopment": "Mobile Development",
+    "dataSolutions": "Data Solutions",
+    "designSolutions": "Design Solutions"
+  },
+  "language": {
+    "label": "Language"
+  }
+}

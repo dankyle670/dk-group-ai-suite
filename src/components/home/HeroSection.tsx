@@ -3,10 +3,12 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowRight, Bot, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useTranslation } from "react-i18next";
 
 export const HeroSection = () => {
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const [isLoopFading, setIsLoopFading] = useState(false);
+  const { t } = useTranslation();
 
   useEffect(() => {
     const videoEl = videoRef.current;
@@ -81,7 +83,7 @@ export const HeroSection = () => {
           >
             <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium bg-primary/10 text-primary border border-primary/20 mb-8">
               <Sparkles className="w-4 h-4" />
-              AI-First Digital Solutions
+              {t("hero.badge")}
             </span>
           </motion.div>
 
@@ -93,13 +95,13 @@ export const HeroSection = () => {
           >
             <Button asChild variant="hero" size="xl">
               <Link to="/contact">
-                Talk to an AI Expert
+                {t("cta.talkToAiExpert")}
                 <ArrowRight className="w-5 h-5" />
               </Link>
             </Button>
             <Button asChild variant="heroOutline" size="xl">
               <Link to="/ai-solutions">
-                Explore AI Solutions
+                {t("cta.exploreAiSolutions")}
               </Link>
             </Button>
           </motion.div>
