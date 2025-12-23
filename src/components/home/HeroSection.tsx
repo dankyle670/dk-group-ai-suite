@@ -16,8 +16,8 @@ export const HeroSection = () => {
       >
         <source src="/videos/hero-background.mp4" type="video/mp4" />
       </video>
-      {/* Overlay for better text readability */}
-      <div className="absolute inset-0 bg-background/40" />
+      {/* Subtle overlay for text readability */}
+      <div className="absolute inset-0 bg-background/20" />
       
       {/* Floating Elements */}
       <motion.div
