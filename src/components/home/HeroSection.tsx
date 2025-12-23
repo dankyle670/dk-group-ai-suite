@@ -1,17 +1,24 @@
+import { useRef } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowRight, Bot, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useTranslation } from "react-i18next";
 
 export const HeroSection = () => {
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+  const { t } = useTranslation();
+
   return (
-    <section className="relative min-h-[90vh] flex items-center overflow-hidden">
+    <section className="relative min-h-[calc(100svh-5rem)] overflow-hidden">
       {/* Video Background */}
       <video
+        ref={videoRef}
         autoPlay
         loop
         muted
         playsInline
+        preload="auto"
         className="absolute inset-0 w-full h-full object-cover"
       >
         <source src="/videos/hero-background.mp4" type="video/mp4" />
@@ -40,17 +47,17 @@ export const HeroSection = () => {
         </div>
       </motion.div>
 
-      <div className="container-custom relative z-10">
-        <div className="max-w-4xl mx-auto text-center">
+      <div className="container-custom relative z-10 min-h-[calc(100svh-5rem)]">
+        <div className="max-w-4xl mx-auto text-center w-full min-h-[calc(100svh-5rem)] relative">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="relative -top-6 sm:-top-8"
+            className="pt-10 sm:pt-12 -translate-y-6 sm:-translate-y-8"
           >
             <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium bg-primary/10 text-primary border border-primary/20 mb-8">
               <Sparkles className="w-4 h-4" />
-              AI-First Digital Solutions
+              {t("hero.badge")}
             </span>
           </motion.div>
 
@@ -58,17 +65,17 @@ export const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="relative top-6 sm:top-8 flex flex-col sm:flex-row gap-4 justify-center"
+            className="absolute inset-x-0 bottom-1 sm:bottom-2 md:bottom-4 flex flex-col sm:flex-row gap-4 justify-center"
           >
             <Button asChild variant="hero" size="xl">
               <Link to="/contact">
-                Talk to an AI Expert
+                {t("cta.talkToAiExpert")}
                 <ArrowRight className="w-5 h-5" />
               </Link>
             </Button>
             <Button asChild variant="heroOutline" size="xl">
               <Link to="/ai-solutions">
-                Explore AI Solutions
+                {t("cta.exploreAiSolutions")}
               </Link>
             </Button>
           </motion.div>

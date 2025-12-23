@@ -2,8 +2,10 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useTranslation } from "react-i18next";
 
 export const CTASection = () => {
+  const { t } = useTranslation();
   return (
     <section className="relative py-24 overflow-hidden">
       {/* Background */}
@@ -23,22 +25,22 @@ export const CTASection = () => {
           className="max-w-3xl mx-auto text-center"
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-            Ready to Build Your{" "}
-            <span className="text-gradient">AI-Powered System?</span>
+            {t("home.ctaSection.titlePrefix")}{" "}
+            <span className="text-gradient">{t("home.ctaSection.titleEmphasis")}</span>
           </h2>
           <p className="text-xl text-muted-foreground mb-10">
-            Let's discuss how we can transform your operations with intelligent automation.
+            {t("home.ctaSection.description")}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild variant="hero" size="xl">
               <Link to="/contact">
-                Start a Conversation
+                {t("home.ctaSection.primary")}
                 <ArrowRight className="w-5 h-5" />
               </Link>
             </Button>
             <Button asChild variant="heroOutline" size="xl">
               <Link to="/dk-agents">
-                Explore DK Agents
+                {t("home.ctaSection.secondary")}
               </Link>
             </Button>
           </div>

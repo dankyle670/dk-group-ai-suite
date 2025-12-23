@@ -1,43 +1,45 @@
 import { motion } from "framer-motion";
 import { Shield, Zap, Users, TrendingUp } from "lucide-react";
 import { Section, SectionHeader } from "@/components/ui/Section";
+import { useTranslation } from "react-i18next";
 
 const features = [
   {
     icon: Users,
-    title: "Long-Term Partner",
-    description: "We don't just build and leave. We grow with your business, iterating and improving over time.",
+    titleKey: "home.whyUs.items.partner.title",
+    descriptionKey: "home.whyUs.items.partner.description",
   },
   {
     icon: Zap,
-    title: "Custom-Built Solutions",
-    description: "Every system is tailored to your specific needs, workflows, and business objectives.",
+    titleKey: "home.whyUs.items.custom.title",
+    descriptionKey: "home.whyUs.items.custom.description",
   },
   {
     icon: Shield,
-    title: "Secure & Scalable",
-    description: "Enterprise-grade security and infrastructure designed to scale from startup to enterprise.",
+    titleKey: "home.whyUs.items.secure.title",
+    descriptionKey: "home.whyUs.items.secure.description",
   },
   {
     icon: TrendingUp,
-    title: "ROI-Focused AI",
-    description: "Our AI solutions are built for measurable business impact, not just technical novelty.",
+    titleKey: "home.whyUs.items.roi.title",
+    descriptionKey: "home.whyUs.items.roi.description",
   },
 ];
 
 export const WhyUsSection = () => {
+  const { t } = useTranslation();
   return (
     <Section className="bg-card/50">
       <SectionHeader
-        badge="Why DK Group"
-        title="Your Strategic Technology Partner"
-        description="We combine deep technical expertise with business acumen to deliver solutions that truly matter."
+        badge={t("home.whyUs.badge")}
+        title={t("home.whyUs.title")}
+        description={t("home.whyUs.description")}
       />
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {features.map((feature, index) => (
           <motion.div
-            key={feature.title}
+            key={feature.titleKey}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -48,8 +50,8 @@ export const WhyUsSection = () => {
               <feature.icon className="w-7 h-7" />
             </div>
             <div>
-              <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-              <p className="text-muted-foreground">{feature.description}</p>
+              <h3 className="text-xl font-semibold mb-2">{t(feature.titleKey)}</h3>
+              <p className="text-muted-foreground">{t(feature.descriptionKey)}</p>
             </div>
           </motion.div>
         ))}

@@ -1,0 +1,173 @@
+{
+  "nav": {
+    "home": "Home",
+    "aiSolutions": "AI Solutions",
+    "web": "Web",
+    "mobile": "Mobile",
+    "data": "Data",
+    "design": "Design",
+    "pricing": "Pricing",
+    "about": "About",
+    "dkAgents": "DK Agents",
+    "contact": "Contact"
+  },
+  "cta": {
+    "talkToExpert": "Talk to an Expert",
+    "talkToAiExpert": "Talk to an AI Expert",
+    "exploreAiSolutions": "Explore AI Solutions"
+  },
+  "hero": {
+    "badge": "AI-First Digital Solutions"
+  },
+  "footer": {
+    "brandBlurb": "Building AI-powered systems that scale your business. Your long-term technology partner.",
+    "solutions": "Solutions",
+    "company": "Company",
+    "getInTouch": "Get in Touch",
+    "getInTouchBlurb": "Ready to transform your business with AI?",
+    "contactUs": "Contact Us",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "allRightsReserved": "All rights reserved."
+  },
+  "solutions": {
+    "webDevelopment": "Web Development",
+    "mobileDevelopment": "Mobile Development",
+    "dataSolutions": "Data Solutions",
+    "designSolutions": "Design Solutions"
+  },
+  "language": {
+    "label": "Language"
+  },
+  "common": {
+    "learnMore": "Learn more"
+  },
+  "labels": {
+    "problem": "Problem:",
+    "solution": "Solution:",
+    "outcome": "Outcome:"
+  },
+  "home": {
+    "services": {
+      "badge": "What We Do",
+      "title": "End-to-End Digital Solutions",
+      "description": "From AI-powered automation to beautiful interfaces, we build products that drive results.",
+      "items": {
+        "ai": {
+          "title": "AI Solutions",
+          "description": "Custom AI agents, automation workflows, and intelligent systems that transform your operations."
+        },
+        "web": {
+          "title": "Web Development",
+          "description": "High-performance web applications built with modern technologies and best practices."
+        },
+        "mobile": {
+          "title": "Mobile Development",
+          "description": "Native and cross-platform mobile apps that deliver exceptional user experiences."
+        },
+        "data": {
+          "title": "Data Solutions",
+          "description": "Data engineering, analytics, and visualization to unlock actionable insights."
+        },
+        "design": {
+          "title": "Design Solutions",
+          "description": "User-centered design and branding that elevates your digital presence."
+        }
+      }
+    },
+    "whyUs": {
+      "badge": "Why DK Group",
+      "title": "Your Strategic Technology Partner",
+      "description": "We combine deep technical expertise with business acumen to deliver solutions that truly matter.",
+      "items": {
+        "partner": {
+          "title": "Long-Term Partner",
+          "description": "We don't just build and leave. We grow with your business, iterating and improving over time."
+        },
+        "custom": {
+          "title": "Custom-Built Solutions",
+          "description": "Every system is tailored to your specific needs, workflows, and business objectives."
+        },
+        "secure": {
+          "title": "Secure & Scalable",
+          "description": "Enterprise-grade security and infrastructure designed to scale from startup to enterprise."
+        },
+        "roi": {
+          "title": "ROI-Focused AI",
+          "description": "Our AI solutions are built for measurable business impact, not just technical novelty."
+        }
+      }
+    },
+    "process": {
+      "badge": "Our Process",
+      "title": "From Idea to Impact",
+      "description": "A proven methodology that transforms complex challenges into elegant solutions.",
+      "steps": {
+        "discover": {
+          "title": "Discover",
+          "description": "Deep dive into your business challenges, goals, and technical requirements."
+        },
+        "design": {
+          "title": "Design",
+          "description": "Architect solutions with clear roadmaps, prototypes, and technical specifications."
+        },
+        "build": {
+          "title": "Build",
+          "description": "Develop with agile methodology, continuous integration, and quality assurance."
+        },
+        "automate": {
+          "title": "Automate",
+          "description": "Deploy AI agents and automation systems that handle repetitive tasks."
+        },
+        "scale": {
+          "title": "Scale",
+          "description": "Optimize, monitor, and scale your systems as your business grows."
+        }
+      }
+    },
+    "aiAgents": {
+      "badge": "AI Agent Ecosystem",
+      "title": "Your AI Workforce, Ready to Deploy",
+      "description": "Pre-built AI agents designed to automate your most time-consuming tasks and scale your operations.",
+      "agents": {
+        "sales": {
+          "name": "Sales AI Agent",
+          "problem": "Manual prospecting is slow and inconsistent",
+          "solution": "Automated lead qualification, CRM updates, and follow-ups",
+          "outcome": "3x more qualified leads with 70% less effort"
+        },
+        "leadgen": {
+          "name": "Lead Generation Agent",
+          "problem": "Finding quality prospects takes too much time",
+          "solution": "Intelligent sourcing, enrichment, and scoring",
+          "outcome": "Continuous pipeline of high-intent leads"
+        },
+        "support": {
+          "name": "Customer Support Agent",
+          "problem": "Support tickets overwhelming your team",
+          "solution": "24/7 AI-powered responses across all channels",
+          "outcome": "80% faster resolution, happier customers"
+        },
+        "marketing": {
+          "name": "Marketing Automation Agent",
+          "problem": "Campaign management is fragmented",
+          "solution": "Unified content, ads, and social automation",
+          "outcome": "2x marketing output, consistent brand voice"
+        },
+        "ops": {
+          "name": "Internal Ops Agent",
+          "problem": "Repetitive tasks drain productivity",
+          "solution": "Workflow automation and intelligent reporting",
+          "outcome": "Hours saved daily on operational work"
+        }
+      }
+    },
+    "ctaSection": {
+      "titlePrefix": "Ready to Build Your",
+      "titleEmphasis": "AI-Powered System?",
+      "description": "Let's discuss how we can transform your operations with intelligent automation.",
+      "primary": "Start a Conversation",
+      "secondary": "Explore DK Agents"
+    }
+  }
+}
