@@ -41,12 +41,12 @@ export const HeroSection = () => {
       </motion.div>
 
       <div className="container-custom relative z-10">
-        <div className="max-w-4xl mx-auto text-center">
+        <div className="max-w-4xl mx-auto text-center min-h-[70vh] flex flex-col items-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="-translate-y-8 sm:-translate-y-10"
+            className="pt-10 sm:pt-12 -translate-y-6 sm:-translate-y-8"
           >
             <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium bg-primary/10 text-primary border border-primary/20 mb-8">
               <Sparkles className="w-4 h-4" />
@@ -58,7 +58,7 @@ export const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="translate-y-16 sm:translate-y-20 flex flex-col sm:flex-row gap-4 justify-center"
+            className="mt-auto pb-14 sm:pb-16 flex flex-col sm:flex-row gap-4 justify-center"
           >
             <Button asChild variant="hero" size="xl">
               <Link to="/contact">
