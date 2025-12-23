@@ -8,6 +8,14 @@ import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { Mail, MapPin, Phone, Send } from "lucide-react";
 
+const SUPPORT_EMAIL = "contact@dkgroupdigital.fr";
+
+function encodeForm(data: Record<string, string>) {
+  return Object.keys(data)
+    .map((key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key] ?? "")}`)
+    .join("&");
+}
+
 const Contact = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -16,16 +24,37 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    toast({
-      title: "Message sent!",
-      description: "We'll get back to you within 24 hours.",
-    });
-    
-    setIsSubmitting(false);
-    (e.target as HTMLFormElement).reset();
+    try {
+      const form = e.currentTarget;
+      const formData = new FormData(form);
+
+      // Netlify Forms expects a urlencoded POST including "form-name"
+      const payload: Record<string, string> = {};
+      formData.forEach((value, key) => {
+        payload[key] = String(value);
+      });
+
+      await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encodeForm(payload),
+      });
+
+      toast({
+        title: "Message sent!",
+        description: "We'll get back to you within 24 hours.",
+      });
+
+      form.reset();
+    } catch {
+      toast({
+        title: "Something went wrong",
+        description: "Please try again, or email us directly.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -62,7 +91,9 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="text-sm text-muted-foreground">Email</p>
-                  <p className="font-medium">hello@dkgroup.io</p>
+                  <a className="font-medium hover:underline" href={`mailto:${SUPPORT_EMAIL}`}>
+                    {SUPPORT_EMAIL}
+                  </a>
                 </div>
               </div>
               
@@ -90,31 +121,44 @@ const Contact = () => {
 
           {/* Contact Form */}
           <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
-            <form onSubmit={handleSubmit} className="p-8 rounded-2xl bg-card border border-border">
+            <form
+              name="contact"
+              method="POST"
+              data-netlify="true"
+              netlify-honeypot="bot-field"
+              onSubmit={handleSubmit}
+              className="p-8 rounded-2xl bg-card border border-border"
+            >
+              <input type="hidden" name="form-name" value="contact" />
+              <p className="hidden">
+                <label>
+                  Don’t fill this out: <input name="bot-field" />
+                </label>
+              </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                 <div>
                   <label className="text-sm font-medium mb-2 block">Name</label>
-                  <Input placeholder="Your name" required className="bg-muted/50 border-border" />
+                  <Input name="name" placeholder="Your name" required className="bg-muted/50 border-border" />
                 </div>
                 <div>
                   <label className="text-sm font-medium mb-2 block">Email</label>
-                  <Input type="email" placeholder="your@email.com" required className="bg-muted/50 border-border" />
+                  <Input name="email" type="email" placeholder="your@email.com" required className="bg-muted/50 border-border" />
                 </div>
               </div>
               
               <div className="mb-4">
                 <label className="text-sm font-medium mb-2 block">Company</label>
-                <Input placeholder="Your company" className="bg-muted/50 border-border" />
+                <Input name="company" placeholder="Your company" className="bg-muted/50 border-border" />
               </div>
               
               <div className="mb-4">
                 <label className="text-sm font-medium mb-2 block">Subject</label>
-                <Input placeholder="What can we help with?" required className="bg-muted/50 border-border" />
+                <Input name="subject" placeholder="What can we help with?" required className="bg-muted/50 border-border" />
               </div>
               
               <div className="mb-6">
                 <label className="text-sm font-medium mb-2 block">Message</label>
-                <Textarea placeholder="Tell us about your project..." rows={5} required className="bg-muted/50 border-border resize-none" />
+                <Textarea name="message" placeholder="Tell us about your project..." rows={5} required className="bg-muted/50 border-border resize-none" />
               </div>
               
               <Button type="submit" variant="hero" size="lg" className="w-full" disabled={isSubmitting}>
