@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 
 export const HeroSection = () => {
   return (
-    <section className="relative min-h-[90vh] overflow-hidden">
+    <section className="relative min-h-[calc(100svh-5rem)] overflow-hidden">
       {/* Video Background */}
       <video
         autoPlay
@@ -40,8 +40,8 @@ export const HeroSection = () => {
         </div>
       </motion.div>
 
-      <div className="container-custom relative z-10 min-h-[90vh]">
-        <div className="max-w-4xl mx-auto text-center w-full min-h-[90vh] relative">
+      <div className="container-custom relative z-10 min-h-[calc(100svh-5rem)]">
+        <div className="max-w-4xl mx-auto text-center w-full min-h-[calc(100svh-5rem)] relative">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -58,7 +58,7 @@ export const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="absolute inset-x-0 bottom-16 sm:bottom-20 md:bottom-24 flex flex-col sm:flex-row gap-4 justify-center"
+            className="absolute inset-x-0 bottom-6 sm:bottom-8 md:bottom-10 flex flex-col sm:flex-row gap-4 justify-center"
           >
             <Button asChild variant="hero" size="xl">
               <Link to="/contact">
