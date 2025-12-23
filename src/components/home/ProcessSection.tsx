@@ -1,47 +1,49 @@
 import { motion } from "framer-motion";
 import { Search, Lightbulb, Hammer, Cog, Rocket } from "lucide-react";
 import { Section, SectionHeader } from "@/components/ui/Section";
+import { useTranslation } from "react-i18next";
 
 const steps = [
   {
     icon: Search,
     number: "01",
-    title: "Discover",
-    description: "Deep dive into your business challenges, goals, and technical requirements.",
+    titleKey: "home.process.steps.discover.title",
+    descriptionKey: "home.process.steps.discover.description",
   },
   {
     icon: Lightbulb,
     number: "02",
-    title: "Design",
-    description: "Architect solutions with clear roadmaps, prototypes, and technical specifications.",
+    titleKey: "home.process.steps.design.title",
+    descriptionKey: "home.process.steps.design.description",
   },
   {
     icon: Hammer,
     number: "03",
-    title: "Build",
-    description: "Develop with agile methodology, continuous integration, and quality assurance.",
+    titleKey: "home.process.steps.build.title",
+    descriptionKey: "home.process.steps.build.description",
   },
   {
     icon: Cog,
     number: "04",
-    title: "Automate",
-    description: "Deploy AI agents and automation systems that handle repetitive tasks.",
+    titleKey: "home.process.steps.automate.title",
+    descriptionKey: "home.process.steps.automate.description",
   },
   {
     icon: Rocket,
     number: "05",
-    title: "Scale",
-    description: "Optimize, monitor, and scale your systems as your business grows.",
+    titleKey: "home.process.steps.scale.title",
+    descriptionKey: "home.process.steps.scale.description",
   },
 ];
 
 export const ProcessSection = () => {
+  const { t } = useTranslation();
   return (
     <Section>
       <SectionHeader
-        badge="Our Process"
-        title="From Idea to Impact"
-        description="A proven methodology that transforms complex challenges into elegant solutions."
+        badge={t("home.process.badge")}
+        title={t("home.process.title")}
+        description={t("home.process.description")}
       />
 
       <div className="relative">
@@ -64,8 +66,8 @@ export const ProcessSection = () => {
                   {step.number}
                 </span>
               </div>
-              <h3 className="text-lg font-semibold mb-2">{step.title}</h3>
-              <p className="text-sm text-muted-foreground">{step.description}</p>
+              <h3 className="text-lg font-semibold mb-2">{t(step.titleKey)}</h3>
+              <p className="text-sm text-muted-foreground">{t(step.descriptionKey)}</p>
             </motion.div>
           ))}
         </div>

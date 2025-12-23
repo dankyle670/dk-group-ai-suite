@@ -38,5 +38,136 @@
   },
   "language": {
     "label": "Langue"
+  },
+  "common": {
+    "learnMore": "En savoir plus"
+  },
+  "labels": {
+    "problem": "Problème :",
+    "solution": "Solution :",
+    "outcome": "Résultat :"
+  },
+  "home": {
+    "services": {
+      "badge": "Nos services",
+      "title": "Des solutions digitales de A à Z",
+      "description": "De l’automatisation par IA aux interfaces soignées, nous créons des produits qui génèrent des résultats.",
+      "items": {
+        "ai": {
+          "title": "Solutions IA",
+          "description": "Agents IA sur mesure, workflows d’automatisation et systèmes intelligents pour transformer vos opérations."
+        },
+        "web": {
+          "title": "Développement web",
+          "description": "Applications web performantes, basées sur des technologies modernes et les meilleures pratiques."
+        },
+        "mobile": {
+          "title": "Développement mobile",
+          "description": "Apps natives et cross‑platform offrant une expérience utilisateur exceptionnelle."
+        },
+        "data": {
+          "title": "Solutions data",
+          "description": "Data engineering, analytics et visualisation pour débloquer des insights actionnables."
+        },
+        "design": {
+          "title": "Solutions design",
+          "description": "Design centré utilisateur et branding pour renforcer votre présence digitale."
+        }
+      }
+    },
+    "whyUs": {
+      "badge": "Pourquoi DK Group",
+      "title": "Votre partenaire technologique",
+      "description": "Nous combinons expertise technique et compréhension business pour livrer des solutions qui comptent vraiment.",
+      "items": {
+        "partner": {
+          "title": "Partenaire long terme",
+          "description": "On ne livre pas puis on disparaît. On progresse avec votre business, on itère et on améliore dans le temps."
+        },
+        "custom": {
+          "title": "Solutions sur mesure",
+          "description": "Chaque système est adapté à vos besoins, vos process et vos objectifs."
+        },
+        "secure": {
+          "title": "Sécurisé & scalable",
+          "description": "Sécurité et infrastructure de niveau entreprise, conçues pour évoluer du startup à l’entreprise."
+        },
+        "roi": {
+          "title": "IA orientée ROI",
+          "description": "Nos solutions IA visent un impact business mesurable, pas seulement la prouesse technique."
+        }
+      }
+    },
+    "process": {
+      "badge": "Notre méthode",
+      "title": "De l’idée à l’impact",
+      "description": "Une méthodologie éprouvée pour transformer des sujets complexes en solutions élégantes.",
+      "steps": {
+        "discover": {
+          "title": "Découverte",
+          "description": "Analyse de vos enjeux, objectifs et contraintes techniques."
+        },
+        "design": {
+          "title": "Conception",
+          "description": "Architecture, roadmap, prototypes et spécifications techniques."
+        },
+        "build": {
+          "title": "Développement",
+          "description": "Méthode agile, intégration continue et assurance qualité."
+        },
+        "automate": {
+          "title": "Automatisation",
+          "description": "Déploiement d’agents IA et d’automatisations pour les tâches répétitives."
+        },
+        "scale": {
+          "title": "Mise à l’échelle",
+          "description": "Optimisation, monitoring et montée en charge au rythme de votre croissance."
+        }
+      }
+    },
+    "aiAgents": {
+      "badge": "Écosystème d’agents IA",
+      "title": "Votre workforce IA, prête à déployer",
+      "description": "Des agents IA prêts à l’emploi pour automatiser vos tâches les plus chronophages et scaler vos opérations.",
+      "agents": {
+        "sales": {
+          "name": "Agent IA Sales",
+          "problem": "La prospection manuelle est lente et irrégulière",
+          "solution": "Qualification automatisée, mises à jour CRM et relances",
+          "outcome": "3× plus de leads qualifiés avec 70% d’effort en moins"
+        },
+        "leadgen": {
+          "name": "Agent de génération de leads",
+          "problem": "Trouver des prospects qualifiés prend trop de temps",
+          "solution": "Sourcing, enrichissement et scoring intelligents",
+          "outcome": "Un pipeline continu de leads à forte intention"
+        },
+        "support": {
+          "name": "Agent support client",
+          "problem": "Les tickets support saturent votre équipe",
+          "solution": "Réponses IA 24/7 sur tous les canaux",
+          "outcome": "80% plus rapide, clients plus satisfaits"
+        },
+        "marketing": {
+          "name": "Agent d’automatisation marketing",
+          "problem": "La gestion des campagnes est fragmentée",
+          "solution": "Automatisation unifiée du contenu, ads et social",
+          "outcome": "2× plus de production marketing, voix de marque cohérente"
+        },
+        "ops": {
+          "name": "Agent ops interne",
+          "problem": "Les tâches répétitives tuent la productivité",
+          "solution": "Automatisation des workflows et reporting intelligent",
+          "outcome": "Des heures gagnées chaque jour sur l’opérationnel"
+        }
+      }
+    },
+    "ctaSection": {
+      "titlePrefix": "Prêt à construire votre",
+      "titleEmphasis": "système propulsé par l’IA ?",
+      "description": "Échangeons sur la façon de transformer vos opérations avec une automatisation intelligente.",
+      "primary": "Démarrer la discussion",
+      "secondary": "Découvrir les agents DK"
+    }
   }
 }

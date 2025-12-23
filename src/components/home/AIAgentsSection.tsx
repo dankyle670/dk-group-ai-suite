@@ -1,58 +1,60 @@
 import { motion } from "framer-motion";
 import { Zap, Target, Headphones, Settings, TrendingUp } from "lucide-react";
 import { Section, SectionHeader } from "@/components/ui/Section";
+import { useTranslation } from "react-i18next";
 
 const agents = [
   {
     icon: Target,
-    name: "Sales AI Agent",
-    problem: "Manual prospecting is slow and inconsistent",
-    solution: "Automated lead qualification, CRM updates, and follow-ups",
-    outcome: "3x more qualified leads with 70% less effort",
+    nameKey: "home.aiAgents.agents.sales.name",
+    problemKey: "home.aiAgents.agents.sales.problem",
+    solutionKey: "home.aiAgents.agents.sales.solution",
+    outcomeKey: "home.aiAgents.agents.sales.outcome",
   },
   {
     icon: TrendingUp,
-    name: "Lead Generation Agent",
-    problem: "Finding quality prospects takes too much time",
-    solution: "Intelligent sourcing, enrichment, and scoring",
-    outcome: "Continuous pipeline of high-intent leads",
+    nameKey: "home.aiAgents.agents.leadgen.name",
+    problemKey: "home.aiAgents.agents.leadgen.problem",
+    solutionKey: "home.aiAgents.agents.leadgen.solution",
+    outcomeKey: "home.aiAgents.agents.leadgen.outcome",
   },
   {
     icon: Headphones,
-    name: "Customer Support Agent",
-    problem: "Support tickets overwhelming your team",
-    solution: "24/7 AI-powered responses across all channels",
-    outcome: "80% faster resolution, happier customers",
+    nameKey: "home.aiAgents.agents.support.name",
+    problemKey: "home.aiAgents.agents.support.problem",
+    solutionKey: "home.aiAgents.agents.support.solution",
+    outcomeKey: "home.aiAgents.agents.support.outcome",
   },
   {
     icon: Zap,
-    name: "Marketing Automation Agent",
-    problem: "Campaign management is fragmented",
-    solution: "Unified content, ads, and social automation",
-    outcome: "2x marketing output, consistent brand voice",
+    nameKey: "home.aiAgents.agents.marketing.name",
+    problemKey: "home.aiAgents.agents.marketing.problem",
+    solutionKey: "home.aiAgents.agents.marketing.solution",
+    outcomeKey: "home.aiAgents.agents.marketing.outcome",
   },
   {
     icon: Settings,
-    name: "Internal Ops Agent",
-    problem: "Repetitive tasks drain productivity",
-    solution: "Workflow automation and intelligent reporting",
-    outcome: "Hours saved daily on operational work",
+    nameKey: "home.aiAgents.agents.ops.name",
+    problemKey: "home.aiAgents.agents.ops.problem",
+    solutionKey: "home.aiAgents.agents.ops.solution",
+    outcomeKey: "home.aiAgents.agents.ops.outcome",
   },
 ];
 
 export const AIAgentsSection = () => {
+  const { t } = useTranslation();
   return (
     <Section>
       <SectionHeader
-        badge="AI Agent Ecosystem"
-        title="Your AI Workforce, Ready to Deploy"
-        description="Pre-built AI agents designed to automate your most time-consuming tasks and scale your operations."
+        badge={t("home.aiAgents.badge")}
+        title={t("home.aiAgents.title")}
+        description={t("home.aiAgents.description")}
       />
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {agents.map((agent, index) => (
           <motion.div
-            key={agent.name}
+              key={agent.nameKey}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -64,19 +66,19 @@ export const AIAgentsSection = () => {
                 <agent.icon className="w-6 h-6" />
               </div>
               <div className="flex-1">
-                <h3 className="text-lg font-semibold mb-4">{agent.name}</h3>
+                <h3 className="text-lg font-semibold mb-4">{t(agent.nameKey)}</h3>
                 <div className="space-y-3 text-sm">
                   <div className="flex gap-3">
-                    <span className="text-destructive font-medium shrink-0">Problem:</span>
-                    <span className="text-muted-foreground">{agent.problem}</span>
+                    <span className="text-destructive font-medium shrink-0">{t("labels.problem")}</span>
+                    <span className="text-muted-foreground">{t(agent.problemKey)}</span>
                   </div>
                   <div className="flex gap-3">
-                    <span className="text-primary font-medium shrink-0">Solution:</span>
-                    <span className="text-muted-foreground">{agent.solution}</span>
+                    <span className="text-primary font-medium shrink-0">{t("labels.solution")}</span>
+                    <span className="text-muted-foreground">{t(agent.solutionKey)}</span>
                   </div>
                   <div className="flex gap-3">
-                    <span className="text-green-400 font-medium shrink-0">Outcome:</span>
-                    <span className="text-foreground font-medium">{agent.outcome}</span>
+                    <span className="text-green-400 font-medium shrink-0">{t("labels.outcome")}</span>
+                    <span className="text-foreground font-medium">{t(agent.outcomeKey)}</span>
                   </div>
                 </div>
               </div>
