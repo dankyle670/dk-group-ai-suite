@@ -9,6 +9,7 @@ import { useToast } from "@/hooks/use-toast";
 import { Mail, MapPin, Phone, Send } from "lucide-react";
 
 const SUPPORT_EMAIL = "contact@dkgroupdigital.fr";
+const NETLIFY_EMAIL_SUBJECT = "New lead from %{formName} (%{submissionId})";
 
 function encodeForm(data: Record<string, string>) {
   return Object.keys(data)
@@ -130,6 +131,12 @@ const Contact = () => {
               className="p-8 rounded-2xl bg-card border border-border"
             >
               <input type="hidden" name="form-name" value="contact" />
+              <input
+                type="hidden"
+                name="subject"
+                data-remove-prefix
+                value={NETLIFY_EMAIL_SUBJECT}
+              />
               <p className="hidden">
                 <label>
                   Don’t fill this out: <input name="bot-field" />
@@ -153,7 +160,12 @@ const Contact = () => {
               
               <div className="mb-4">
                 <label className="text-sm font-medium mb-2 block">Subject</label>
-                <Input name="subject" placeholder="What can we help with?" required className="bg-muted/50 border-border" />
+                <Input
+                  name="topic"
+                  placeholder="What can we help with?"
+                  required
+                  className="bg-muted/50 border-border"
+                />
               </div>
               
               <div className="mb-6">
