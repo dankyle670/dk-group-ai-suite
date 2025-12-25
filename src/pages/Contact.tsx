@@ -7,6 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { Mail, MapPin, Phone, Send } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const SUPPORT_EMAIL = "contact@dkgroupdigital.fr";
 const NETLIFY_EMAIL_SUBJECT = "New lead from %{formName} (%{submissionId})";
@@ -20,6 +21,7 @@ function encodeForm(data: Record<string, string>) {
 const Contact = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const { t } = useTranslation();
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -42,15 +44,15 @@ const Contact = () => {
       });
 
       toast({
-        title: "Message sent!",
-        description: "We'll get back to you within 24 hours.",
+        title: t("pages.contact.toast.successTitle"),
+        description: t("pages.contact.toast.successDescription"),
       });
 
       form.reset();
     } catch {
       toast({
-        title: "Something went wrong",
-        description: "Please try again, or email us directly.",
+        title: t("pages.contact.toast.errorTitle"),
+        description: t("pages.contact.toast.errorDescription"),
         variant: "destructive",
       });
     } finally {
@@ -67,10 +69,11 @@ const Contact = () => {
         <div className="container-custom relative z-10">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              Let's Build{" "}<span className="text-gradient">Together</span>
+              {t("pages.contact.heroTitlePrefix")}{" "}
+              <span className="text-gradient">{t("pages.contact.heroTitleEmphasis")}</span>
             </h1>
             <p className="text-xl text-muted-foreground">
-              Tell us about your project and we'll get back to you within 24 hours.
+              {t("pages.contact.heroDescription")}
             </p>
           </motion.div>
         </div>
@@ -80,9 +83,9 @@ const Contact = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 max-w-6xl mx-auto">
           {/* Contact Info */}
           <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
-            <h2 className="text-2xl font-bold mb-6">Get in Touch</h2>
+            <h2 className="text-2xl font-bold mb-6">{t("pages.contact.infoTitle")}</h2>
             <p className="text-muted-foreground mb-8">
-              Ready to transform your business with AI? We're here to help you navigate the future of technology.
+              {t("pages.contact.infoDescription")}
             </p>
             
             <div className="space-y-6">
@@ -91,7 +94,7 @@ const Contact = () => {
                   <Mail className="w-5 h-5" />
                 </div>
                 <div>
-                  <p className="text-sm text-muted-foreground">Email</p>
+                  <p className="text-sm text-muted-foreground">{t("pages.contact.emailLabel")}</p>
                   <a className="font-medium hover:underline" href={`mailto:${SUPPORT_EMAIL}`}>
                     {SUPPORT_EMAIL}
                   </a>
@@ -103,7 +106,7 @@ const Contact = () => {
                   <Phone className="w-5 h-5" />
                 </div>
                 <div>
-                  <p className="text-sm text-muted-foreground">Phone</p>
+                  <p className="text-sm text-muted-foreground">{t("pages.contact.phoneLabel")}</p>
                   <p className="font-medium">+33 1 23 45 67 89</p>
                 </div>
               </div>
@@ -113,7 +116,7 @@ const Contact = () => {
                   <MapPin className="w-5 h-5" />
                 </div>
                 <div>
-                  <p className="text-sm text-muted-foreground">Location</p>
+                  <p className="text-sm text-muted-foreground">{t("pages.contact.locationLabel")}</p>
                   <p className="font-medium">Paris, France</p>
                 </div>
               </div>
@@ -144,37 +147,37 @@ const Contact = () => {
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                 <div>
-                  <label className="text-sm font-medium mb-2 block">Name</label>
-                  <Input name="name" placeholder="Your name" required className="bg-muted/50 border-border" />
+                  <label className="text-sm font-medium mb-2 block">{t("pages.contact.form.name")}</label>
+                  <Input name="name" placeholder={t("pages.contact.form.namePlaceholder")} required className="bg-muted/50 border-border" />
                 </div>
                 <div>
-                  <label className="text-sm font-medium mb-2 block">Email</label>
-                  <Input name="email" type="email" placeholder="your@email.com" required className="bg-muted/50 border-border" />
+                  <label className="text-sm font-medium mb-2 block">{t("pages.contact.form.email")}</label>
+                  <Input name="email" type="email" placeholder={t("pages.contact.form.emailPlaceholder")} required className="bg-muted/50 border-border" />
                 </div>
               </div>
               
               <div className="mb-4">
-                <label className="text-sm font-medium mb-2 block">Company</label>
-                <Input name="company" placeholder="Your company" className="bg-muted/50 border-border" />
+                <label className="text-sm font-medium mb-2 block">{t("pages.contact.form.company")}</label>
+                <Input name="company" placeholder={t("pages.contact.form.companyPlaceholder")} className="bg-muted/50 border-border" />
               </div>
               
               <div className="mb-4">
-                <label className="text-sm font-medium mb-2 block">Subject</label>
+                <label className="text-sm font-medium mb-2 block">{t("pages.contact.form.topic")}</label>
                 <Input
                   name="topic"
-                  placeholder="What can we help with?"
+                  placeholder={t("pages.contact.form.topicPlaceholder")}
                   required
                   className="bg-muted/50 border-border"
                 />
               </div>
               
               <div className="mb-6">
-                <label className="text-sm font-medium mb-2 block">Message</label>
-                <Textarea name="message" placeholder="Tell us about your project..." rows={5} required className="bg-muted/50 border-border resize-none" />
+                <label className="text-sm font-medium mb-2 block">{t("pages.contact.form.message")}</label>
+                <Textarea name="message" placeholder={t("pages.contact.form.messagePlaceholder")} rows={5} required className="bg-muted/50 border-border resize-none" />
               </div>
               
               <Button type="submit" variant="hero" size="lg" className="w-full" disabled={isSubmitting}>
-                {isSubmitting ? "Sending..." : "Send Message"}
+                {isSubmitting ? t("pages.contact.form.sending") : t("pages.contact.form.send")}
                 <Send className="w-4 h-4" />
               </Button>
             </form>
