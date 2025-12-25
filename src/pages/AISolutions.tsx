@@ -8,57 +8,84 @@ import {
   Database, Brain, RefreshCw, Sparkles, Building2, ShoppingCart,
   Home, Briefcase, DollarSign, Heart
 } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const agentCategories = [
   {
     icon: Target,
-    title: "Sales AI Agents",
-    description: "Automated prospecting, CRM management, follow-up sequences, and objection handling.",
-    features: ["Lead qualification", "Meeting scheduling", "Pipeline tracking", "Win rate optimization"],
+    titleKey: "pages.aiSolutions.categories.sales.title",
+    descriptionKey: "pages.aiSolutions.categories.sales.description",
+    featureKeys: [
+      "pages.aiSolutions.categories.sales.features.0",
+      "pages.aiSolutions.categories.sales.features.1",
+      "pages.aiSolutions.categories.sales.features.2",
+      "pages.aiSolutions.categories.sales.features.3"
+    ],
   },
   {
     icon: Zap,
-    title: "Marketing AI Agents",
-    description: "Content generation, ad optimization, SEO automation, and social media management.",
-    features: ["Content creation", "Campaign optimization", "Audience targeting", "Performance analytics"],
+    titleKey: "pages.aiSolutions.categories.marketing.title",
+    descriptionKey: "pages.aiSolutions.categories.marketing.description",
+    featureKeys: [
+      "pages.aiSolutions.categories.marketing.features.0",
+      "pages.aiSolutions.categories.marketing.features.1",
+      "pages.aiSolutions.categories.marketing.features.2",
+      "pages.aiSolutions.categories.marketing.features.3"
+    ],
   },
   {
     icon: Headphones,
-    title: "Support AI Agents",
-    description: "24/7 customer support across chat, voice, email, and omnichannel touchpoints.",
-    features: ["Instant responses", "Ticket routing", "Knowledge base", "Sentiment analysis"],
+    titleKey: "pages.aiSolutions.categories.support.title",
+    descriptionKey: "pages.aiSolutions.categories.support.description",
+    featureKeys: [
+      "pages.aiSolutions.categories.support.features.0",
+      "pages.aiSolutions.categories.support.features.1",
+      "pages.aiSolutions.categories.support.features.2",
+      "pages.aiSolutions.categories.support.features.3"
+    ],
   },
   {
     icon: Settings,
-    title: "Operations AI Agents",
-    description: "Internal workflow automation, reporting, and process optimization.",
-    features: ["Task automation", "Report generation", "Process monitoring", "Resource allocation"],
+    titleKey: "pages.aiSolutions.categories.ops.title",
+    descriptionKey: "pages.aiSolutions.categories.ops.description",
+    featureKeys: [
+      "pages.aiSolutions.categories.ops.features.0",
+      "pages.aiSolutions.categories.ops.features.1",
+      "pages.aiSolutions.categories.ops.features.2",
+      "pages.aiSolutions.categories.ops.features.3"
+    ],
   },
   {
     icon: Code,
-    title: "Custom AI Agents",
-    description: "Bespoke AI solutions tailored to your unique business requirements.",
-    features: ["Custom integrations", "Industry-specific", "Scalable architecture", "Full ownership"],
+    titleKey: "pages.aiSolutions.categories.custom.title",
+    descriptionKey: "pages.aiSolutions.categories.custom.description",
+    featureKeys: [
+      "pages.aiSolutions.categories.custom.features.0",
+      "pages.aiSolutions.categories.custom.features.1",
+      "pages.aiSolutions.categories.custom.features.2",
+      "pages.aiSolutions.categories.custom.features.3"
+    ],
   },
 ];
 
 const industries = [
-  { icon: Building2, name: "SaaS", description: "Automate customer lifecycle" },
-  { icon: ShoppingCart, name: "E-commerce", description: "Scale support & personalization" },
-  { icon: Home, name: "Real Estate", description: "Lead nurturing & property matching" },
-  { icon: Briefcase, name: "Agencies", description: "Client management & delivery" },
-  { icon: DollarSign, name: "Finance", description: "Compliance & reporting" },
-  { icon: Heart, name: "Healthcare", description: "Patient engagement" },
+  { icon: Building2, nameKey: "pages.aiSolutions.industries.0.name", descriptionKey: "pages.aiSolutions.industries.0.description" },
+  { icon: ShoppingCart, nameKey: "pages.aiSolutions.industries.1.name", descriptionKey: "pages.aiSolutions.industries.1.description" },
+  { icon: Home, nameKey: "pages.aiSolutions.industries.2.name", descriptionKey: "pages.aiSolutions.industries.2.description" },
+  { icon: Briefcase, nameKey: "pages.aiSolutions.industries.3.name", descriptionKey: "pages.aiSolutions.industries.3.description" },
+  { icon: DollarSign, nameKey: "pages.aiSolutions.industries.4.name", descriptionKey: "pages.aiSolutions.industries.4.description" },
+  { icon: Heart, nameKey: "pages.aiSolutions.industries.5.name", descriptionKey: "pages.aiSolutions.industries.5.description" },
 ];
 
 const howItWorks = [
-  { icon: Database, title: "Data Ingestion", description: "Connect your data sources and knowledge bases" },
-  { icon: Brain, title: "Context Understanding", description: "AI learns your business context and goals" },
-  { icon: Sparkles, title: "Action Execution", description: "Agents perform tasks autonomously" },
-  { icon: RefreshCw, title: "Continuous Learning", description: "Systems improve from feedback and results" },
+  { icon: Database, titleKey: "pages.aiSolutions.howItWorks.0.title", descriptionKey: "pages.aiSolutions.howItWorks.0.description" },
+  { icon: Brain, titleKey: "pages.aiSolutions.howItWorks.1.title", descriptionKey: "pages.aiSolutions.howItWorks.1.description" },
+  { icon: Sparkles, titleKey: "pages.aiSolutions.howItWorks.2.title", descriptionKey: "pages.aiSolutions.howItWorks.2.description" },
+  { icon: RefreshCw, titleKey: "pages.aiSolutions.howItWorks.3.title", descriptionKey: "pages.aiSolutions.howItWorks.3.description" },
 ];
 
 const AISolutions = () => {
+  const { t } = useTranslation();
   return (
     <Layout>
       {/* Hero */}
@@ -74,25 +101,25 @@ const AISolutions = () => {
           >
             <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium bg-primary/10 text-primary border border-primary/20 mb-6">
               <Bot className="w-4 h-4" />
-              AI-First Solutions
+              {t("pages.aiSolutions.heroBadge")}
             </span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              AI Agents & Intelligent Systems{" "}
-              <span className="text-gradient">for Business Growth</span>
+              {t("pages.aiSolutions.heroTitlePrefix")}{" "}
+              <span className="text-gradient">{t("pages.aiSolutions.heroTitleEmphasis")}</span>
             </h1>
             <p className="text-xl text-muted-foreground mb-10">
-              From automation to decision-making AI, we build systems that work for you 24/7.
+              {t("pages.aiSolutions.heroDescription")}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild variant="hero" size="xl">
                 <Link to="/contact">
-                  Design My AI Agent
+                  {t("pages.aiSolutions.heroPrimary")}
                   <ArrowRight className="w-5 h-5" />
                 </Link>
               </Button>
               <Button asChild variant="heroOutline" size="xl">
                 <Link to="/dk-agents">
-                  Try DK Agents
+                  {t("pages.aiSolutions.heroSecondary")}
                 </Link>
               </Button>
             </div>
@@ -103,14 +130,14 @@ const AISolutions = () => {
       {/* Agent Categories */}
       <Section className="bg-card/50">
         <SectionHeader
-          badge="AI Agent Categories"
-          title="Intelligent Agents for Every Function"
-          description="Deploy specialized AI agents that handle specific business functions end-to-end."
+          badge={t("pages.aiSolutions.categoriesSection.badge")}
+          title={t("pages.aiSolutions.categoriesSection.title")}
+          description={t("pages.aiSolutions.categoriesSection.description")}
         />
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {agentCategories.map((category, index) => (
             <motion.div
-              key={category.title}
+              key={category.titleKey}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -120,13 +147,13 @@ const AISolutions = () => {
               <div className="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4">
                 <category.icon className="w-6 h-6" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">{category.title}</h3>
-              <p className="text-muted-foreground text-sm mb-4">{category.description}</p>
+              <h3 className="text-xl font-semibold mb-2">{t(category.titleKey)}</h3>
+              <p className="text-muted-foreground text-sm mb-4">{t(category.descriptionKey)}</p>
               <ul className="space-y-2">
-                {category.features.map((feature) => (
-                  <li key={feature} className="flex items-center gap-2 text-sm text-muted-foreground">
+                {category.featureKeys.map((featureKey) => (
+                  <li key={featureKey} className="flex items-center gap-2 text-sm text-muted-foreground">
                     <div className="w-1.5 h-1.5 rounded-full bg-primary" />
-                    {feature}
+                    {t(featureKey)}
                   </li>
                 ))}
               </ul>
@@ -138,14 +165,14 @@ const AISolutions = () => {
       {/* Industries */}
       <Section>
         <SectionHeader
-          badge="Use Cases"
-          title="AI Solutions by Industry"
-          description="Proven implementations across various sectors and business models."
+          badge={t("pages.aiSolutions.industriesSection.badge")}
+          title={t("pages.aiSolutions.industriesSection.title")}
+          description={t("pages.aiSolutions.industriesSection.description")}
         />
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
           {industries.map((industry, index) => (
             <motion.div
-              key={industry.name}
+              key={industry.nameKey}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -153,8 +180,8 @@ const AISolutions = () => {
               className="p-6 rounded-xl bg-card border border-border hover:border-primary/30 transition-all text-center card-hover"
             >
               <industry.icon className="w-8 h-8 text-primary mx-auto mb-3" />
-              <h4 className="font-semibold mb-1">{industry.name}</h4>
-              <p className="text-xs text-muted-foreground">{industry.description}</p>
+              <h4 className="font-semibold mb-1">{t(industry.nameKey)}</h4>
+              <p className="text-xs text-muted-foreground">{t(industry.descriptionKey)}</p>
             </motion.div>
           ))}
         </div>
@@ -163,14 +190,14 @@ const AISolutions = () => {
       {/* How It Works */}
       <Section className="bg-card/50">
         <SectionHeader
-          badge="How It Works"
-          title="From Data to Action"
-          description="Our AI agents follow a proven methodology to deliver consistent results."
+          badge={t("pages.aiSolutions.howItWorksSection.badge")}
+          title={t("pages.aiSolutions.howItWorksSection.title")}
+          description={t("pages.aiSolutions.howItWorksSection.description")}
         />
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {howItWorks.map((step, index) => (
             <motion.div
-              key={step.title}
+              key={step.titleKey}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -180,8 +207,8 @@ const AISolutions = () => {
               <div className="w-16 h-16 rounded-2xl bg-primary/10 text-primary flex items-center justify-center mx-auto mb-4">
                 <step.icon className="w-8 h-8" />
               </div>
-              <h3 className="font-semibold mb-2">{step.title}</h3>
-              <p className="text-sm text-muted-foreground">{step.description}</p>
+              <h3 className="font-semibold mb-2">{t(step.titleKey)}</h3>
+              <p className="text-sm text-muted-foreground">{t(step.descriptionKey)}</p>
             </motion.div>
           ))}
         </div>
@@ -196,14 +223,14 @@ const AISolutions = () => {
           className="max-w-3xl mx-auto text-center"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Ready to Deploy Your <span className="text-gradient">AI Workforce?</span>
+            {t("pages.aiSolutions.cta.titlePrefix")} <span className="text-gradient">{t("pages.aiSolutions.cta.titleEmphasis")}</span>
           </h2>
           <p className="text-lg text-muted-foreground mb-8">
-            Let's discuss how AI agents can transform your operations.
+            {t("pages.aiSolutions.cta.description")}
           </p>
           <Button asChild variant="hero" size="xl">
             <Link to="/contact">
-              Get Started
+              {t("pages.aiSolutions.cta.button")}
               <ArrowRight className="w-5 h-5" />
             </Link>
           </Button>
