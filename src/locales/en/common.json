@@ -224,6 +224,96 @@
       },
       "missionTitle": "Our Mission",
       "missionDescription": "To empower businesses with intelligent technology that drives measurable growth, enabling them to focus on what matters most while AI handles the rest."
+    },
+    "pricing": {
+      "heroTitlePrefix": "AI-Powered Solutions",
+      "heroTitleEmphasis": "Designed to Scale",
+      "heroDescription": "Choose a flexible pricing model that fits your growth stage.",
+      "agentPlans": {
+        "badge": "DK Agents",
+        "title": "AI Agent Subscriptions",
+        "description": "Deploy intelligent agents that work for you around the clock."
+      },
+      "plans": {
+        "mostPopular": "Most Popular",
+        "periodPerMonth": "/month",
+        "starter": {
+          "description": "Perfect for small teams getting started with AI",
+          "cta": "Start with Starter",
+          "features": {
+            "f1": "1 AI Agent",
+            "f2": "Basic automation workflows",
+            "f3": "5,000 actions/month",
+            "f4": "Email support",
+            "f5": "Standard integrations"
+          }
+        },
+        "growth": {
+          "description": "For growing businesses scaling operations",
+          "cta": "Start with Growth",
+          "features": {
+            "f1": "Up to 3 AI Agents",
+            "f2": "Advanced workflows",
+            "f3": "50,000 actions/month",
+            "f4": "Priority support",
+            "f5": "CRM & tool integrations",
+            "f6": "Analytics dashboard",
+            "f7": "Custom training"
+          }
+        },
+        "scale": {
+          "description": "Enterprise solutions for maximum impact",
+          "price": "Custom",
+          "cta": "Contact Sales",
+          "features": {
+            "f1": "Unlimited AI Agents",
+            "f2": "Full automation suite",
+            "f3": "Unlimited actions",
+            "f4": "Dedicated support",
+            "f5": "API access",
+            "f6": "Custom integrations",
+            "f7": "SLA guarantee",
+            "f8": "On-premise option"
+          }
+        }
+      },
+      "oneShot": {
+        "badge": "Custom Projects",
+        "title": "One-Shot Solutions",
+        "description": "Fixed-scope projects delivered with precision and excellence.",
+        "cta": "Discuss Your Project",
+        "items": {
+          "web": { "title": "Web Development", "description": "Custom web applications built to spec" },
+          "mobile": { "title": "Mobile Development", "description": "Native and cross-platform mobile apps" },
+          "data": { "title": "Data Solutions", "description": "Analytics, pipelines, and dashboards" },
+          "design": { "title": "Design Solutions", "description": "UI/UX design and branding" },
+          "ai": { "title": "AI Integration", "description": "Custom AI solutions for your stack" }
+        }
+      },
+      "model": {
+        "badge": "Our Model",
+        "title": "Why This Pricing Works",
+        "cards": {
+          "subscriptions": {
+            "title": "Subscriptions = Recurring Value",
+            "description": "AI agents improve over time, delivering continuous optimization and growing ROI month after month."
+          },
+          "oneShot": {
+            "title": "One-Shot = High-Impact Delivery",
+            "description": "Custom projects with clear scope, timeline, and deliverables. Perfect for specific technical needs."
+          },
+          "aiAgents": {
+            "title": "AI Agents = Evolving Products",
+            "description": "Unlike traditional software, our AI agents learn and adapt, becoming more valuable as they work with your data."
+          }
+        }
+      },
+      "cta": {
+        "title": "Ready to Get Started?",
+        "description": "Create an account to test DK Agents with limited free usage.",
+        "primary": "Try DK Agents Free",
+        "secondary": "Contact Sales"
+      }
     }
   }
 }

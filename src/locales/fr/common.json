@@ -224,6 +224,96 @@
       },
       "missionTitle": "Notre mission",
       "missionDescription": "Permettre aux entreprises d’accélérer grâce à une technologie intelligente et mesurable, pour se concentrer sur l’essentiel pendant que l’IA fait le reste."
+    },
+    "pricing": {
+      "heroTitlePrefix": "Des solutions propulsées par l’IA",
+      "heroTitleEmphasis": "pensées pour scaler",
+      "heroDescription": "Choisissez un modèle de prix flexible adapté à votre stade de croissance.",
+      "agentPlans": {
+        "badge": "DK Agents",
+        "title": "Abonnements Agents IA",
+        "description": "Déployez des agents intelligents qui travaillent pour vous 24/7."
+      },
+      "plans": {
+        "mostPopular": "Le plus populaire",
+        "periodPerMonth": "/mois",
+        "starter": {
+          "description": "Parfait pour les petites équipes qui démarrent avec l’IA",
+          "cta": "Choisir Starter",
+          "features": {
+            "f1": "1 agent IA",
+            "f2": "Workflows d’automatisation basiques",
+            "f3": "5 000 actions/mois",
+            "f4": "Support email",
+            "f5": "Intégrations standard"
+          }
+        },
+        "growth": {
+          "description": "Pour les entreprises en croissance qui veulent scaler leurs opérations",
+          "cta": "Choisir Growth",
+          "features": {
+            "f1": "Jusqu’à 3 agents IA",
+            "f2": "Workflows avancés",
+            "f3": "50 000 actions/mois",
+            "f4": "Support prioritaire",
+            "f5": "Intégrations CRM & outils",
+            "f6": "Dashboard analytics",
+            "f7": "Entraînement sur mesure"
+          }
+        },
+        "scale": {
+          "description": "Solution entreprise pour un impact maximal",
+          "price": "Sur devis",
+          "cta": "Contacter sales",
+          "features": {
+            "f1": "Agents IA illimités",
+            "f2": "Suite d’automatisation complète",
+            "f3": "Actions illimitées",
+            "f4": "Support dédié",
+            "f5": "Accès API",
+            "f6": "Intégrations sur mesure",
+            "f7": "Garantie SLA",
+            "f8": "Option on‑premise"
+          }
+        }
+      },
+      "oneShot": {
+        "badge": "Projets sur mesure",
+        "title": "Solutions One‑Shot",
+        "description": "Projets au périmètre fixe livrés avec précision et excellence.",
+        "cta": "Discuter de votre projet",
+        "items": {
+          "web": { "title": "Développement web", "description": "Applications web sur mesure, livrées selon vos spécifications" },
+          "mobile": { "title": "Développement mobile", "description": "Apps natives et cross‑platform" },
+          "data": { "title": "Solutions data", "description": "Analytics, pipelines et dashboards" },
+          "design": { "title": "Solutions design", "description": "UI/UX design et branding" },
+          "ai": { "title": "Intégration IA", "description": "Solutions IA sur mesure pour votre stack" }
+        }
+      },
+      "model": {
+        "badge": "Notre modèle",
+        "title": "Pourquoi ce pricing fonctionne",
+        "cards": {
+          "subscriptions": {
+            "title": "Abonnements = valeur récurrente",
+            "description": "Les agents IA s’améliorent avec le temps, optimisent en continu et augmentent le ROI mois après mois."
+          },
+          "oneShot": {
+            "title": "One‑Shot = delivery à fort impact",
+            "description": "Des projets sur mesure avec périmètre, délais et livrables clairs. Parfait pour un besoin technique précis."
+          },
+          "aiAgents": {
+            "title": "Agents IA = produits qui évoluent",
+            "description": "Contrairement au logiciel classique, nos agents IA apprennent et s’adaptent, et deviennent plus précieux avec vos données."
+          }
+        }
+      },
+      "cta": {
+        "title": "Prêt à démarrer ?",
+        "description": "Créez un compte pour tester DK Agents avec une utilisation gratuite limitée.",
+        "primary": "Tester DK Agents gratuitement",
+        "secondary": "Contacter sales"
+      }
     }
   }
 }
