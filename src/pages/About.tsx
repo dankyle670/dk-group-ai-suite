@@ -2,15 +2,17 @@ import { motion } from "framer-motion";
 import { Layout } from "@/components/layout/Layout";
 import { Section, SectionHeader } from "@/components/ui/Section";
 import { Users, Target, Lightbulb, Heart } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const values = [
-  { icon: Target, title: "Excellence", description: "We pursue the highest standards in everything we build." },
-  { icon: Lightbulb, title: "Innovation", description: "Pushing boundaries with cutting-edge technology." },
-  { icon: Users, title: "Partnership", description: "Long-term relationships built on trust and results." },
-  { icon: Heart, title: "Impact", description: "Solutions that create real business value." },
+  { icon: Target, key: "excellence" },
+  { icon: Lightbulb, key: "innovation" },
+  { icon: Users, key: "partnership" },
+  { icon: Heart, key: "impact" },
 ];
 
 const About = () => {
+  const { t } = useTranslation();
   return (
     <Layout>
       <section className="relative pt-32 pb-20 overflow-hidden">
@@ -20,10 +22,11 @@ const About = () => {
         <div className="container-custom relative z-10">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              Building the Future{" "}<span className="text-gradient">of Business</span>
+              {t("pages.about.heroTitlePrefix")}{" "}
+              <span className="text-gradient">{t("pages.about.heroTitleEmphasis")}</span>
             </h1>
             <p className="text-xl text-muted-foreground">
-              DK Group is a digital & AI solutions company dedicated to helping businesses thrive in the age of automation.
+              {t("pages.about.heroDescription")}
             </p>
           </motion.div>
         </div>
@@ -32,27 +35,21 @@ const About = () => {
       <Section>
         <div className="max-w-3xl mx-auto">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="space-y-6 text-lg text-muted-foreground">
-            <p>
-              Founded with a vision to democratize AI and advanced technology, DK Group has become a trusted partner for startups, SMEs, and scale-ups looking to leverage intelligent systems for growth.
-            </p>
-            <p>
-              We're not just another agency. We're a team of engineers, designers, and strategists who believe in building solutions that last. Our AI-first approach means we're constantly pushing the boundaries of what's possible.
-            </p>
-            <p>
-              From custom AI agents that automate sales and support to full-stack web and mobile applications, we deliver end-to-end solutions that scale with your business.
-            </p>
+            <p>{t("pages.about.p1")}</p>
+            <p>{t("pages.about.p2")}</p>
+            <p>{t("pages.about.p3")}</p>
           </motion.div>
         </div>
       </Section>
 
       <Section className="bg-card/50">
-        <SectionHeader badge="Our Values" title="What Drives Us" />
+        <SectionHeader badge={t("pages.about.values.badge")} title={t("pages.about.values.title")} />
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {values.map((v, i) => (
-            <motion.div key={v.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} className="p-6 rounded-xl bg-card border border-border text-center">
+            <motion.div key={v.key} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} className="p-6 rounded-xl bg-card border border-border text-center">
               <v.icon className="w-10 h-10 text-primary mx-auto mb-4" />
-              <h3 className="font-semibold mb-2">{v.title}</h3>
-              <p className="text-sm text-muted-foreground">{v.description}</p>
+              <h3 className="font-semibold mb-2">{t(`pages.about.values.items.${v.key}.title`)}</h3>
+              <p className="text-sm text-muted-foreground">{t(`pages.about.values.items.${v.key}.description`)}</p>
             </motion.div>
           ))}
         </div>
@@ -60,9 +57,9 @@ const About = () => {
 
       <Section>
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-6">Our Mission</h2>
+          <h2 className="text-3xl font-bold mb-6">{t("pages.about.missionTitle")}</h2>
           <p className="text-xl text-muted-foreground">
-            To empower businesses with intelligent technology that drives measurable growth, enabling them to focus on what matters most while AI handles the rest.
+            {t("pages.about.missionDescription")}
           </p>
         </div>
       </Section>

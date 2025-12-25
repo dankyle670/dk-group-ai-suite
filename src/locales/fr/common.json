@@ -169,5 +169,61 @@
       "primary": "Démarrer la discussion",
       "secondary": "Découvrir les agents DK"
     }
+  },
+  "pages": {
+    "notFound": {
+      "message": "Oups ! Page introuvable",
+      "backHome": "Retour à l’accueil"
+    },
+    "contact": {
+      "heroTitlePrefix": "Construisons",
+      "heroTitleEmphasis": "ensemble",
+      "heroDescription": "Parlez-nous de votre projet et nous vous répondons sous 24h.",
+      "infoTitle": "Nous contacter",
+      "infoDescription": "Prêt à transformer votre business avec l’IA ? Nous sommes là pour vous accompagner.",
+      "emailLabel": "Email",
+      "phoneLabel": "Téléphone",
+      "locationLabel": "Localisation",
+      "form": {
+        "name": "Nom",
+        "namePlaceholder": "Votre nom",
+        "email": "Email",
+        "emailPlaceholder": "vous@email.com",
+        "company": "Entreprise",
+        "companyPlaceholder": "Votre entreprise",
+        "topic": "Sujet",
+        "topicPlaceholder": "Comment pouvons-nous vous aider ?",
+        "message": "Message",
+        "messagePlaceholder": "Décrivez votre projet…",
+        "send": "Envoyer",
+        "sending": "Envoi…"
+      },
+      "toast": {
+        "successTitle": "Message envoyé !",
+        "successDescription": "Nous vous répondons sous 24h.",
+        "errorTitle": "Une erreur est survenue",
+        "errorDescription": "Réessayez, ou envoyez-nous un email directement."
+      }
+    },
+    "about": {
+      "heroTitlePrefix": "Construire le futur",
+      "heroTitleEmphasis": "des entreprises",
+      "heroDescription": "DK Group est une agence digitale & IA dédiée à aider les entreprises à réussir à l’ère de l’automatisation.",
+      "p1": "Fondé avec la volonté de démocratiser l’IA et les technologies avancées, DK Group est devenu un partenaire de confiance pour les startups, PME et scale-ups qui veulent accélérer grâce à des systèmes intelligents.",
+      "p2": "Nous ne sommes pas une agence de plus. Nous sommes une équipe d’ingénieurs, de designers et de stratèges qui construit des solutions durables. Notre approche “AI-first” nous pousse à repousser les limites du possible.",
+      "p3": "Des agents IA sur mesure (sales/support) aux applications web et mobile full‑stack, nous livrons des solutions end‑to‑end qui évoluent avec votre activité.",
+      "values": {
+        "badge": "Nos valeurs",
+        "title": "Ce qui nous guide",
+        "items": {
+          "excellence": { "title": "Excellence", "description": "Nous visons le plus haut niveau dans tout ce que nous construisons." },
+          "innovation": { "title": "Innovation", "description": "Nous repoussons les limites avec des technologies de pointe." },
+          "partnership": { "title": "Partenariat", "description": "Une relation long terme basée sur la confiance et les résultats." },
+          "impact": { "title": "Impact", "description": "Des solutions qui créent une vraie valeur business." }
+        }
+      },
+      "missionTitle": "Notre mission",
+      "missionDescription": "Permettre aux entreprises d’accélérer grâce à une technologie intelligente et mesurable, pour se concentrer sur l’essentiel pendant que l’IA fait le reste."
+    }
   }
 }

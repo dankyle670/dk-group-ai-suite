@@ -169,5 +169,61 @@
       "primary": "Start a Conversation",
       "secondary": "Explore DK Agents"
     }
+  },
+  "pages": {
+    "notFound": {
+      "message": "Oops! Page not found",
+      "backHome": "Return to Home"
+    },
+    "contact": {
+      "heroTitlePrefix": "Let's Build",
+      "heroTitleEmphasis": "Together",
+      "heroDescription": "Tell us about your project and we'll get back to you within 24 hours.",
+      "infoTitle": "Get in Touch",
+      "infoDescription": "Ready to transform your business with AI? We're here to help you navigate the future of technology.",
+      "emailLabel": "Email",
+      "phoneLabel": "Phone",
+      "locationLabel": "Location",
+      "form": {
+        "name": "Name",
+        "namePlaceholder": "Your name",
+        "email": "Email",
+        "emailPlaceholder": "your@email.com",
+        "company": "Company",
+        "companyPlaceholder": "Your company",
+        "topic": "Subject",
+        "topicPlaceholder": "What can we help with?",
+        "message": "Message",
+        "messagePlaceholder": "Tell us about your project...",
+        "send": "Send Message",
+        "sending": "Sending..."
+      },
+      "toast": {
+        "successTitle": "Message sent!",
+        "successDescription": "We'll get back to you within 24 hours.",
+        "errorTitle": "Something went wrong",
+        "errorDescription": "Please try again, or email us directly."
+      }
+    },
+    "about": {
+      "heroTitlePrefix": "Building the Future",
+      "heroTitleEmphasis": "of Business",
+      "heroDescription": "DK Group is a digital & AI solutions company dedicated to helping businesses thrive in the age of automation.",
+      "p1": "Founded with a vision to democratize AI and advanced technology, DK Group has become a trusted partner for startups, SMEs, and scale-ups looking to leverage intelligent systems for growth.",
+      "p2": "We're not just another agency. We're a team of engineers, designers, and strategists who believe in building solutions that last. Our AI-first approach means we're constantly pushing the boundaries of what's possible.",
+      "p3": "From custom AI agents that automate sales and support to full-stack web and mobile applications, we deliver end-to-end solutions that scale with your business.",
+      "values": {
+        "badge": "Our Values",
+        "title": "What Drives Us",
+        "items": {
+          "excellence": { "title": "Excellence", "description": "We pursue the highest standards in everything we build." },
+          "innovation": { "title": "Innovation", "description": "Pushing boundaries with cutting-edge technology." },
+          "partnership": { "title": "Partnership", "description": "Long-term relationships built on trust and results." },
+          "impact": { "title": "Impact", "description": "Solutions that create real business value." }
+        }
+      },
+      "missionTitle": "Our Mission",
+      "missionDescription": "To empower businesses with intelligent technology that drives measurable growth, enabling them to focus on what matters most while AI handles the rest."
+    }
   }
 }
