@@ -4,6 +4,7 @@ import { Layout } from "@/components/layout/Layout";
 import { Section, SectionHeader } from "@/components/ui/Section";
 import { Button } from "@/components/ui/button";
 import { Palette, ArrowRight, Figma, Users, Sparkles, Eye } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const features = [
   { icon: Users, title: "User Research", description: "Data-driven insights for design decisions." },
@@ -15,6 +16,7 @@ const features = [
 const services = ["UI/UX Design", "Brand Identity", "Design Systems", "Prototyping", "User Research", "Motion Design"];
 
 const DesignSolutions = () => {
+  const { t } = useTranslation();
   return (
     <Layout>
       <section className="relative pt-32 pb-20 overflow-hidden">
@@ -25,40 +27,44 @@ const DesignSolutions = () => {
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="max-w-3xl mx-auto text-center">
             <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium bg-primary/10 text-primary border border-primary/20 mb-6">
               <Palette className="w-4 h-4" />
-              Design Solutions
+              {t("pages.design.badge")}
             </span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              Design That{" "}<span className="text-gradient">Converts</span>
+              {t("pages.design.heroTitlePrefix")}{" "}
+              <span className="text-gradient">{t("pages.design.heroTitleEmphasis")}</span>
             </h1>
             <p className="text-xl text-muted-foreground mb-10">
-              User-centered design and branding that elevates your digital presence.
+              {t("pages.design.heroDescription")}
             </p>
             <Button asChild variant="hero" size="xl">
-              <Link to="/contact">Start Designing <ArrowRight className="w-5 h-5" /></Link>
+              <Link to="/contact">
+                {t("pages.design.heroCta")}
+                <ArrowRight className="w-5 h-5" />
+              </Link>
             </Button>
           </motion.div>
         </div>
       </section>
 
       <Section className="bg-card/50">
-        <SectionHeader badge="Capabilities" title="Design Excellence" />
+        <SectionHeader badge={t("pages.design.capabilities.badge")} title={t("pages.design.capabilities.title")} />
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {features.map((f, i) => (
             <motion.div key={f.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} className="p-6 rounded-xl bg-card border border-border text-center">
               <f.icon className="w-10 h-10 text-primary mx-auto mb-4" />
-              <h3 className="font-semibold mb-2">{f.title}</h3>
-              <p className="text-sm text-muted-foreground">{f.description}</p>
+              <h3 className="font-semibold mb-2">{t(`pages.design.features.${i}.title`)}</h3>
+              <p className="text-sm text-muted-foreground">{t(`pages.design.features.${i}.description`)}</p>
             </motion.div>
           ))}
         </div>
       </Section>
 
       <Section>
-        <SectionHeader badge="Services" title="Design Services" />
+        <SectionHeader badge={t("pages.design.services.badge")} title={t("pages.design.services.title")} />
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-3xl mx-auto">
           {services.map((s, i) => (
             <motion.div key={s} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.05 }} className="p-4 rounded-lg bg-card border border-border text-center">
-              <span className="text-sm font-medium">{s}</span>
+              <span className="text-sm font-medium">{t(`pages.design.services.items.${i}`)}</span>
             </motion.div>
           ))}
         </div>
@@ -66,8 +72,13 @@ const DesignSolutions = () => {
 
       <Section className="bg-card/50">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="max-w-2xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-6">Ready for Great Design?</h2>
-          <Button asChild variant="hero" size="lg"><Link to="/contact">Let's Create <ArrowRight className="w-5 h-5" /></Link></Button>
+          <h2 className="text-3xl font-bold mb-6">{t("pages.design.bottomCta.title")}</h2>
+          <Button asChild variant="hero" size="lg">
+            <Link to="/contact">
+              {t("pages.design.bottomCta.button")}
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+          </Button>
         </motion.div>
       </Section>
     </Layout>

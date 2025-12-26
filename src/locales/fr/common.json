@@ -314,6 +314,218 @@
         "primary": "Tester DK Agents gratuitement",
         "secondary": "Contacter sales"
       }
+    },
+    "web": {
+      "badge": "Développement web",
+      "heroTitlePrefix": "Des applications web",
+      "heroTitleEmphasis": "faites pour performer",
+      "heroDescription": "Des solutions web performantes qui génèrent des résultats grâce à des technologies modernes.",
+      "heroCta": "Démarrer votre projet",
+      "capabilities": { "badge": "Compétences", "title": "Ce que nous construisons" },
+      "features": [
+        { "title": "Stack moderne", "description": "React, Next.js, TypeScript et des technologies de pointe." },
+        { "title": "Performance d’abord", "description": "Optimisé pour la vitesse, le SEO et la conversion." },
+        { "title": "Sécurisé & scalable", "description": "Sécurité entreprise et infrastructure cloud prête à monter en charge." },
+        { "title": "Portée mondiale", "description": "Multi‑langue, CDN, livraison partout dans le monde." }
+      ],
+      "services": {
+        "badge": "Services",
+        "title": "Solutions web",
+        "items": [
+          "Applications web sur mesure",
+          "Plateformes e‑commerce",
+          "Produits SaaS",
+          "Progressive Web Apps (PWA)",
+          "Développement d’API",
+          "Solutions CMS"
+        ]
+      },
+      "bottomCta": { "title": "Construisons quelque chose de grand", "button": "Nous contacter" }
+    },
+    "data": {
+      "badge": "Solutions data",
+      "heroTitlePrefix": "Transformez vos données en",
+      "heroTitleEmphasis": "avantage business",
+      "heroDescription": "Data engineering, analytics et visualisation pour débloquer des insights actionnables.",
+      "heroCta": "Valoriser vos données",
+      "capabilities": { "badge": "Compétences", "title": "Excellence data" },
+      "features": [
+        { "title": "Pipelines data", "description": "Ingestion et transformation automatisées." },
+        { "title": "Analytics", "description": "Dashboards temps réel et business intelligence." },
+        { "title": "Intégration ML/IA", "description": "Modèles de machine learning pour la prédiction." },
+        { "title": "Gouvernance data", "description": "Sécurité, conformité et qualité." }
+      ],
+      "services": {
+        "badge": "Services",
+        "title": "Services data",
+        "items": ["Data engineering", "Dashboards BI", "Pipelines ETL", "Data warehouse", "Modèles ML", "Stratégie data"]
+      },
+      "bottomCta": { "title": "Exploitez la puissance de la data", "button": "Démarrer" }
+    },
+    "mobile": {
+      "badge": "Développement mobile",
+      "heroTitlePrefix": "Des apps mobiles",
+      "heroTitleEmphasis": "que vos utilisateurs adorent",
+      "heroDescription": "Applications mobiles natives et cross‑platform pour une expérience exceptionnelle.",
+      "heroCta": "Lancer votre app",
+      "capabilities": { "badge": "Compétences", "title": "Excellence mobile" },
+      "features": [
+        { "title": "Performance native", "description": "Apps iOS et Android qui se comportent comme du natif." },
+        { "title": "Cross‑platform", "description": "React Native et Flutter pour un développement efficace." },
+        { "title": "Centré utilisateur", "description": "Interfaces intuitives pensées pour l’engagement." },
+        { "title": "Prêt pour l’entreprise", "description": "Sécurisé, scalable et maintenable." }
+      ],
+      "services": {
+        "badge": "Services",
+        "title": "Ce que nous livrons",
+        "items": ["Apps iOS", "Apps Android", "Cross‑platform", "Refonte d’app", "Intégration backend", "Maintenance"]
+      },
+      "bottomCta": { "title": "Prêt à passer au mobile ?", "button": "On en parle" }
+    },
+    "design": {
+      "badge": "Solutions design",
+      "heroTitlePrefix": "Un design qui",
+      "heroTitleEmphasis": "convertit",
+      "heroDescription": "Design centré utilisateur et branding pour renforcer votre présence digitale.",
+      "heroCta": "Démarrer le design",
+      "capabilities": { "badge": "Compétences", "title": "Excellence design" },
+      "features": [
+        { "title": "Recherche utilisateur", "description": "Des insights data-driven pour guider les décisions design." },
+        { "title": "Design UI/UX", "description": "Interfaces belles, intuitives et efficaces." },
+        { "title": "Identité de marque", "description": "Des marques mémorables qui résonnent." },
+        { "title": "Design systems", "description": "Un langage design cohérent et scalable." }
+      ],
+      "services": {
+        "badge": "Services",
+        "title": "Services design",
+        "items": ["Design UI/UX", "Identité de marque", "Design systems", "Prototypage", "Recherche utilisateur", "Motion design"]
+      },
+      "bottomCta": { "title": "Prêt pour un super design ?", "button": "Créer ensemble" }
+    },
+    "aiSolutions": {
+      "heroBadge": "Solutions IA",
+      "heroTitlePrefix": "Agents IA & systèmes intelligents",
+      "heroTitleEmphasis": "pour la croissance",
+      "heroDescription": "De l’automatisation à l’IA décisionnelle, nous construisons des systèmes qui travaillent pour vous 24/7.",
+      "heroPrimary": "Concevoir mon agent IA",
+      "heroSecondary": "Essayer DK Agents",
+      "categoriesSection": {
+        "badge": "Catégories d’agents",
+        "title": "Des agents pour chaque fonction",
+        "description": "Déployez des agents spécialisés qui prennent en charge vos fonctions business de bout en bout."
+      },
+      "categories": {
+        "sales": {
+          "title": "Agents IA Sales",
+          "description": "Prospection automatisée, CRM, relances et gestion des objections.",
+          "features": ["Qualification des leads", "Prise de rendez‑vous", "Suivi du pipeline", "Optimisation du taux de closing"]
+        },
+        "marketing": {
+          "title": "Agents IA Marketing",
+          "description": "Génération de contenu, optimisation des ads, automatisation SEO et social media.",
+          "features": ["Création de contenu", "Optimisation de campagnes", "Ciblage d’audience", "Analytics de performance"]
+        },
+        "support": {
+          "title": "Agents IA Support",
+          "description": "Support client 24/7 sur chat, email, voix et omnicanal.",
+          "features": ["Réponses instantanées", "Routage des tickets", "Base de connaissance", "Analyse de sentiment"]
+        },
+        "ops": {
+          "title": "Agents IA Ops",
+          "description": "Automatisation des workflows internes, reporting et optimisation de process.",
+          "features": ["Automatisation de tâches", "Génération de rapports", "Monitoring de process", "Allocation de ressources"]
+        },
+        "custom": {
+          "title": "Agents IA sur mesure",
+          "description": "Solutions IA personnalisées adaptées à vos besoins métiers.",
+          "features": ["Intégrations sur mesure", "Spécifique à votre industrie", "Architecture scalable", "Pleine propriété"]
+        }
+      },
+      "industriesSection": {
+        "badge": "Cas d’usage",
+        "title": "Solutions IA par industrie",
+        "description": "Des implémentations éprouvées sur différents secteurs et modèles."
+      },
+      "industries": [
+        { "name": "SaaS", "description": "Automatiser le cycle client" },
+        { "name": "E‑commerce", "description": "Scaler support & personnalisation" },
+        { "name": "Immobilier", "description": "Nurturing & matching de biens" },
+        { "name": "Agences", "description": "Gestion client & delivery" },
+        { "name": "Finance", "description": "Conformité & reporting" },
+        { "name": "Santé", "description": "Engagement patient" }
+      ],
+      "howItWorksSection": {
+        "badge": "Comment ça marche",
+        "title": "De la data à l’action",
+        "description": "Nos agents suivent une méthodologie éprouvée pour délivrer des résultats."
+      },
+      "howItWorks": [
+        { "title": "Ingestion de données", "description": "Connectez vos sources de données et bases de connaissance" },
+        { "title": "Compréhension du contexte", "description": "L’IA apprend votre contexte et vos objectifs" },
+        { "title": "Exécution d’actions", "description": "Les agents exécutent des tâches de manière autonome" },
+        { "title": "Apprentissage continu", "description": "Les systèmes s’améliorent grâce aux retours et aux résultats" }
+      ],
+      "cta": {
+        "titlePrefix": "Prêt à déployer votre",
+        "titleEmphasis": "workforce IA ?",
+        "description": "Échangeons sur la façon dont des agents IA peuvent transformer vos opérations.",
+        "button": "Démarrer"
+      }
+    },
+    "dkAgents": {
+      "heroBadge": "Plateforme DK Agents",
+      "heroTitlePrefix": "Découvrez DK Agents",
+      "heroTitleEmphasis": "— votre workforce IA",
+      "heroDescription": "Des agents IA prêts à déployer pour automatiser vos opérations.",
+      "cards": {
+        "badge": "Agents disponibles",
+        "title": "Choisissez votre workforce IA",
+        "description": "Chaque agent est spécialisé sur une fonction et prêt à travailler.",
+        "capabilitiesLabel": "Fonctionnalités :",
+        "tryAgent": "Essayer cet agent"
+      },
+      "agents": {
+        "sales": {
+          "name": "Agent Sales",
+          "role": "Automatisation des ventes",
+          "description": "Automatise la prospection, la qualification, les relances et les mises à jour CRM.",
+          "capabilities": ["Séquences email", "Scoring de leads", "Prise de rendez‑vous", "Rapports pipeline"]
+        },
+        "marketing": {
+          "name": "Agent Marketing",
+          "role": "Automatisation marketing",
+          "description": "Gère la création de contenu, l’optimisation des ads et la publication social media.",
+          "capabilities": ["Génération de contenu", "Copy d’annonces", "Planification social", "Suivi de performance"]
+        },
+        "support": {
+          "name": "Agent Support",
+          "role": "Support client",
+          "description": "Assure un support 24/7 sur chat, email et canaux voix.",
+          "capabilities": ["Réponses instantanées", "Routage de tickets", "Gestion FAQ", "Règles d’escalade"]
+        },
+        "ops": {
+          "name": "Agent Ops",
+          "role": "Opérations internes",
+          "description": "Automatise les workflows internes, le reporting et l’optimisation de process.",
+          "capabilities": ["Automatisation de tâches", "Génération de rapports", "Sync de données", "Notifications"]
+        }
+      },
+      "auth": {
+        "title": "Authentification requise",
+        "description": "Créez un compte ou connectez-vous pour accéder au mode démo. Vous aurez une utilisation gratuite limitée pour tester nos agents IA.",
+        "primary": "Créer un compte",
+        "secondary": "Se connecter"
+      },
+      "demo": {
+        "badge": "Mode démo",
+        "title": "Ce que vous pouvez faire en démo",
+        "items": [
+          { "title": "✓ Tester les fonctionnalités clés", "description": "Découvrez les capacités principales avec des données d’exemple." },
+          { "title": "✓ Actions limitées", "description": "Exécutez un nombre défini d’actions pour voir les résultats." },
+          { "title": "✓ Environnement sandbox", "description": "Un espace de test sans impact sur vos systèmes de production." },
+          { "title": "✓ Upgrade simple", "description": "Passez facilement en accès complet quand vous êtes prêt." }
+        ]
+      }
     }
   }
 }

@@ -4,6 +4,7 @@ import { Layout } from "@/components/layout/Layout";
 import { Section, SectionHeader } from "@/components/ui/Section";
 import { Button } from "@/components/ui/button";
 import { Code, ArrowRight, Globe, Zap, Shield, Gauge } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const features = [
   { icon: Zap, title: "Modern Stack", description: "React, Next.js, TypeScript, and cutting-edge technologies." },
@@ -22,6 +23,7 @@ const services = [
 ];
 
 const WebDevelopment = () => {
+  const { t } = useTranslation();
   return (
     <Layout>
       <section className="relative pt-32 pb-20 overflow-hidden">
@@ -32,40 +34,44 @@ const WebDevelopment = () => {
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="max-w-3xl mx-auto text-center">
             <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium bg-primary/10 text-primary border border-primary/20 mb-6">
               <Code className="w-4 h-4" />
-              Web Development
+              {t("pages.web.badge")}
             </span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              Web Applications{" "}<span className="text-gradient">Built to Perform</span>
+              {t("pages.web.heroTitlePrefix")}{" "}
+              <span className="text-gradient">{t("pages.web.heroTitleEmphasis")}</span>
             </h1>
             <p className="text-xl text-muted-foreground mb-10">
-              High-performance web solutions that drive business results with modern technologies.
+              {t("pages.web.heroDescription")}
             </p>
             <Button asChild variant="hero" size="xl">
-              <Link to="/contact">Start Your Project <ArrowRight className="w-5 h-5" /></Link>
+              <Link to="/contact">
+                {t("pages.web.heroCta")}
+                <ArrowRight className="w-5 h-5" />
+              </Link>
             </Button>
           </motion.div>
         </div>
       </section>
 
       <Section className="bg-card/50">
-        <SectionHeader badge="Capabilities" title="What We Build" />
+        <SectionHeader badge={t("pages.web.capabilities.badge")} title={t("pages.web.capabilities.title")} />
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {features.map((f, i) => (
             <motion.div key={f.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} className="p-6 rounded-xl bg-card border border-border text-center">
               <f.icon className="w-10 h-10 text-primary mx-auto mb-4" />
-              <h3 className="font-semibold mb-2">{f.title}</h3>
-              <p className="text-sm text-muted-foreground">{f.description}</p>
+              <h3 className="font-semibold mb-2">{t(`pages.web.features.${i}.title`)}</h3>
+              <p className="text-sm text-muted-foreground">{t(`pages.web.features.${i}.description`)}</p>
             </motion.div>
           ))}
         </div>
       </Section>
 
       <Section>
-        <SectionHeader badge="Services" title="Web Solutions" />
+        <SectionHeader badge={t("pages.web.services.badge")} title={t("pages.web.services.title")} />
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-3xl mx-auto">
           {services.map((s, i) => (
             <motion.div key={s} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.05 }} className="p-4 rounded-lg bg-card border border-border text-center">
-              <span className="text-sm font-medium">{s}</span>
+              <span className="text-sm font-medium">{t(`pages.web.services.items.${i}`)}</span>
             </motion.div>
           ))}
         </div>
@@ -73,8 +79,13 @@ const WebDevelopment = () => {
 
       <Section className="bg-card/50">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="max-w-2xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-6">Let's Build Something Great</h2>
-          <Button asChild variant="hero" size="lg"><Link to="/contact">Get in Touch <ArrowRight className="w-5 h-5" /></Link></Button>
+          <h2 className="text-3xl font-bold mb-6">{t("pages.web.bottomCta.title")}</h2>
+          <Button asChild variant="hero" size="lg">
+            <Link to="/contact">
+              {t("pages.web.bottomCta.button")}
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+          </Button>
         </motion.div>
       </Section>
     </Layout>

@@ -314,6 +314,218 @@
         "primary": "Try DK Agents Free",
         "secondary": "Contact Sales"
       }
+    },
+    "web": {
+      "badge": "Web Development",
+      "heroTitlePrefix": "Web Applications",
+      "heroTitleEmphasis": "Built to Perform",
+      "heroDescription": "High-performance web solutions that drive business results with modern technologies.",
+      "heroCta": "Start Your Project",
+      "capabilities": { "badge": "Capabilities", "title": "What We Build" },
+      "features": [
+        { "title": "Modern Stack", "description": "React, Next.js, TypeScript, and cutting-edge technologies." },
+        { "title": "Performance First", "description": "Optimized for speed, SEO, and conversion." },
+        { "title": "Secure & Scalable", "description": "Enterprise-grade security and cloud infrastructure." },
+        { "title": "Global Reach", "description": "Multi-language, CDN-powered, worldwide delivery." }
+      ],
+      "services": {
+        "badge": "Services",
+        "title": "Web Solutions",
+        "items": [
+          "Custom Web Applications",
+          "E-commerce Platforms",
+          "SaaS Products",
+          "Progressive Web Apps",
+          "API Development",
+          "CMS Solutions"
+        ]
+      },
+      "bottomCta": { "title": "Let's Build Something Great", "button": "Get in Touch" }
+    },
+    "data": {
+      "badge": "Data Solutions",
+      "heroTitlePrefix": "Turn Data Into",
+      "heroTitleEmphasis": "Business Advantage",
+      "heroDescription": "Data engineering, analytics, and visualization to unlock actionable insights.",
+      "heroCta": "Unlock Your Data",
+      "capabilities": { "badge": "Capabilities", "title": "Data Excellence" },
+      "features": [
+        { "title": "Data Pipelines", "description": "Automated data ingestion and transformation." },
+        { "title": "Analytics", "description": "Real-time dashboards and business intelligence." },
+        { "title": "ML/AI Integration", "description": "Machine learning models for predictions." },
+        { "title": "Data Governance", "description": "Security, compliance, and quality." }
+      ],
+      "services": {
+        "badge": "Services",
+        "title": "Data Services",
+        "items": ["Data Engineering", "BI Dashboards", "ETL Pipelines", "Data Warehousing", "ML Models", "Data Strategy"]
+      },
+      "bottomCta": { "title": "Harness the Power of Data", "button": "Get Started" }
+    },
+    "mobile": {
+      "badge": "Mobile Development",
+      "heroTitlePrefix": "Mobile Apps",
+      "heroTitleEmphasis": "Users Love",
+      "heroDescription": "Native and cross-platform mobile applications that deliver exceptional experiences.",
+      "heroCta": "Start Your App",
+      "capabilities": { "badge": "Capabilities", "title": "Mobile Excellence" },
+      "features": [
+        { "title": "Native Performance", "description": "iOS and Android apps that feel truly native." },
+        { "title": "Cross-Platform", "description": "React Native and Flutter for efficient development." },
+        { "title": "User-Centric", "description": "Intuitive interfaces designed for engagement." },
+        { "title": "Enterprise Ready", "description": "Secure, scalable, and maintainable." }
+      ],
+      "services": {
+        "badge": "Services",
+        "title": "What We Deliver",
+        "items": ["iOS Apps", "Android Apps", "Cross-Platform", "App Redesign", "Backend Integration", "Maintenance"]
+      },
+      "bottomCta": { "title": "Ready to Go Mobile?", "button": "Let's Talk" }
+    },
+    "design": {
+      "badge": "Design Solutions",
+      "heroTitlePrefix": "Design That",
+      "heroTitleEmphasis": "Converts",
+      "heroDescription": "User-centered design and branding that elevates your digital presence.",
+      "heroCta": "Start Designing",
+      "capabilities": { "badge": "Capabilities", "title": "Design Excellence" },
+      "features": [
+        { "title": "User Research", "description": "Data-driven insights for design decisions." },
+        { "title": "UI/UX Design", "description": "Beautiful, intuitive interface design." },
+        { "title": "Brand Identity", "description": "Memorable brands that resonate." },
+        { "title": "Design Systems", "description": "Scalable, consistent design language." }
+      ],
+      "services": {
+        "badge": "Services",
+        "title": "Design Services",
+        "items": ["UI/UX Design", "Brand Identity", "Design Systems", "Prototyping", "User Research", "Motion Design"]
+      },
+      "bottomCta": { "title": "Ready for Great Design?", "button": "Let's Create" }
+    },
+    "aiSolutions": {
+      "heroBadge": "AI-First Solutions",
+      "heroTitlePrefix": "AI Agents & Intelligent Systems",
+      "heroTitleEmphasis": "for Business Growth",
+      "heroDescription": "From automation to decision-making AI, we build systems that work for you 24/7.",
+      "heroPrimary": "Design My AI Agent",
+      "heroSecondary": "Try DK Agents",
+      "categoriesSection": {
+        "badge": "AI Agent Categories",
+        "title": "Intelligent Agents for Every Function",
+        "description": "Deploy specialized AI agents that handle specific business functions end-to-end."
+      },
+      "categories": {
+        "sales": {
+          "title": "Sales AI Agents",
+          "description": "Automated prospecting, CRM management, follow-up sequences, and objection handling.",
+          "features": ["Lead qualification", "Meeting scheduling", "Pipeline tracking", "Win rate optimization"]
+        },
+        "marketing": {
+          "title": "Marketing AI Agents",
+          "description": "Content generation, ad optimization, SEO automation, and social media management.",
+          "features": ["Content creation", "Campaign optimization", "Audience targeting", "Performance analytics"]
+        },
+        "support": {
+          "title": "Support AI Agents",
+          "description": "24/7 customer support across chat, voice, email, and omnichannel touchpoints.",
+          "features": ["Instant responses", "Ticket routing", "Knowledge base", "Sentiment analysis"]
+        },
+        "ops": {
+          "title": "Operations AI Agents",
+          "description": "Internal workflow automation, reporting, and process optimization.",
+          "features": ["Task automation", "Report generation", "Process monitoring", "Resource allocation"]
+        },
+        "custom": {
+          "title": "Custom AI Agents",
+          "description": "Bespoke AI solutions tailored to your unique business requirements.",
+          "features": ["Custom integrations", "Industry-specific", "Scalable architecture", "Full ownership"]
+        }
+      },
+      "industriesSection": {
+        "badge": "Use Cases",
+        "title": "AI Solutions by Industry",
+        "description": "Proven implementations across various sectors and business models."
+      },
+      "industries": [
+        { "name": "SaaS", "description": "Automate customer lifecycle" },
+        { "name": "E-commerce", "description": "Scale support & personalization" },
+        { "name": "Real Estate", "description": "Lead nurturing & property matching" },
+        { "name": "Agencies", "description": "Client management & delivery" },
+        { "name": "Finance", "description": "Compliance & reporting" },
+        { "name": "Healthcare", "description": "Patient engagement" }
+      ],
+      "howItWorksSection": {
+        "badge": "How It Works",
+        "title": "From Data to Action",
+        "description": "Our AI agents follow a proven methodology to deliver consistent results."
+      },
+      "howItWorks": [
+        { "title": "Data Ingestion", "description": "Connect your data sources and knowledge bases" },
+        { "title": "Context Understanding", "description": "AI learns your business context and goals" },
+        { "title": "Action Execution", "description": "Agents perform tasks autonomously" },
+        { "title": "Continuous Learning", "description": "Systems improve from feedback and results" }
+      ],
+      "cta": {
+        "titlePrefix": "Ready to Deploy Your",
+        "titleEmphasis": "AI Workforce?",
+        "description": "Let's discuss how AI agents can transform your operations.",
+        "button": "Get Started"
+      }
+    },
+    "dkAgents": {
+      "heroBadge": "DK Agents Platform",
+      "heroTitlePrefix": "Meet DK Agents",
+      "heroTitleEmphasis": "— Your AI Workforce",
+      "heroDescription": "Pre-built AI agents ready to deploy and automate your business operations.",
+      "cards": {
+        "badge": "Available Agents",
+        "title": "Choose Your AI Workforce",
+        "description": "Each agent is specialized for a specific function and ready to work.",
+        "capabilitiesLabel": "Capabilities:",
+        "tryAgent": "Try This Agent"
+      },
+      "agents": {
+        "sales": {
+          "name": "Sales Agent",
+          "role": "Sales Automation",
+          "description": "Automates prospecting, lead qualification, follow-ups, and CRM updates.",
+          "capabilities": ["Email sequences", "Lead scoring", "Meeting scheduling", "Pipeline reports"]
+        },
+        "marketing": {
+          "name": "Marketing Agent",
+          "role": "Marketing Automation",
+          "description": "Manages content creation, ad optimization, and social media posting.",
+          "capabilities": ["Content generation", "Ad copy", "Social scheduling", "Performance tracking"]
+        },
+        "support": {
+          "name": "Support Agent",
+          "role": "Customer Support",
+          "description": "Provides 24/7 customer support across chat, email, and voice channels.",
+          "capabilities": ["Instant responses", "Ticket routing", "FAQ handling", "Escalation rules"]
+        },
+        "ops": {
+          "name": "Operations Agent",
+          "role": "Internal Operations",
+          "description": "Automates internal workflows, reporting, and process optimization.",
+          "capabilities": ["Task automation", "Report generation", "Data sync", "Notifications"]
+        }
+      },
+      "auth": {
+        "title": "Authentication Required",
+        "description": "Create an account or sign in to access demo mode. You'll get limited free usage to experience what our AI agents can do.",
+        "primary": "Create Account",
+        "secondary": "Sign In"
+      },
+      "demo": {
+        "badge": "Demo Mode",
+        "title": "What You Can Do in Demo",
+        "items": [
+          { "title": "✓ Test Core Features", "description": "Experience the agent's primary capabilities with sample data." },
+          { "title": "✓ Limited Actions", "description": "Run a set number of actions to see results firsthand." },
+          { "title": "✓ Sandbox Environment", "description": "Safe testing space with no impact on production systems." },
+          { "title": "✓ Easy Upgrade", "description": "Seamlessly transition to full access when ready." }
+        ]
+      }
     }
   }
 }
