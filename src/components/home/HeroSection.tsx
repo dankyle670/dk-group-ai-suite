@@ -4,10 +4,12 @@ import { motion } from "framer-motion";
 import { ArrowRight, Bot, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useTranslation } from "react-i18next";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 export const HeroSection = () => {
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const { t } = useTranslation();
+  const isMobile = useIsMobile();
 
   return (
     <section className="relative min-h-[calc(100svh-5rem)] overflow-hidden">
@@ -18,10 +20,15 @@ export const HeroSection = () => {
         loop
         muted
         playsInline
-        preload="auto"
+        preload={isMobile ? "metadata" : "auto"}
+        poster="/videos/hero-poster.jpg"
+        disablePictureInPicture
         className="absolute inset-0 w-full h-full object-cover"
       >
-        <source src="/videos/hero-background.mp4" type="video/mp4" />
+        <source
+          src={isMobile ? "/videos/hero-background.mobile.mp4" : "/videos/hero-background.mp4"}
+          type="video/mp4"
+        />
       </video>
       {/* Subtle overlay for text readability */}
       <div className="absolute inset-0 bg-background/20" />
