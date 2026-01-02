@@ -9,7 +9,7 @@ import { useToast } from "@/hooks/use-toast";
 import { Mail, MapPin, Phone, Send } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
-const SUPPORT_EMAIL = "contact@dkgroupdigital.fr";
+const SUPPORT_EMAIL = "danielkomoe78@gmail.com";
 const NETLIFY_EMAIL_SUBJECT = "New lead from %{formName} (%{submissionId})";
 
 function encodeForm(data: Record<string, string>) {
@@ -107,7 +107,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="text-sm text-muted-foreground">{t("pages.contact.phoneLabel")}</p>
-                  <p className="font-medium">+33 1 23 45 67 89</p>
+                  <p className="font-medium">+33 6 03 31 31 89</p>
                 </div>
               </div>
               
