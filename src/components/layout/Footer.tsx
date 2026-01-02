@@ -3,8 +3,8 @@ import Logo from "@/assets/logo.svg";
 import { useTranslation } from "react-i18next";
 import { Instagram, Linkedin } from "lucide-react";
 
-const INSTAGRAM_URL = "https://www.instagram.com/dkgroupdigital/";
-const LINKEDIN_URL = "https://www.linkedin.com/company/dkgroupdigital/";
+const INSTAGRAM_URL = "https://www.instagram.com/dkgroup_fr?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==";
+const LINKEDIN_URL = ""; // Compte LinkedIn pas encore créé
 
 export const Footer = () => {
   const { t } = useTranslation();
@@ -52,15 +52,17 @@ export const Footer = () => {
               >
                 <Instagram className="h-5 w-5" />
               </a>
-              <a
-                href={LINKEDIN_URL}
-                target="_blank"
-                rel="noreferrer"
-                aria-label="LinkedIn"
-                className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-border bg-background/40 text-muted-foreground hover:text-foreground hover:border-primary/30 transition-colors"
-              >
-                <Linkedin className="h-5 w-5" />
-              </a>
+              {LINKEDIN_URL && (
+                <a
+                  href={LINKEDIN_URL}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="LinkedIn"
+                  className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-border bg-background/40 text-muted-foreground hover:text-foreground hover:border-primary/30 transition-colors"
+                >
+                  <Linkedin className="h-5 w-5" />
+                </a>
+              )}
             </div>
           </div>
 
