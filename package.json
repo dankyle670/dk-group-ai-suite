@@ -30,7 +30,6 @@
       "--no-sandbox",
       "--disable-setuid-sandbox"
     ],
-    "puppeteerExecutablePath": "",
     "inlineCss": false,
     "minifyCss": false,
     "minifyHtml": {
