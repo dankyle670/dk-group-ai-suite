@@ -1,9 +1,14 @@
- [build]
-   command = "npm run build"
-   publish = "dist"
- 
- # SPA routing (React Router): serve index.html for all routes
- [[redirects]]
-   from = "/*"
-   to = "/index.html"
-   status = 200
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  # Puppeteer (react-snap) : skip le téléchargement Chromium car Netlify fournit son propre binaire
+  PUPPETEER_SKIP_CHROMIUM_DOWNLOAD = "true"
+  PUPPETEER_EXECUTABLE_PATH = "/usr/bin/google-chrome-stable"
+
+# SPA fallback pour les routes sans snapshot (ex: 404)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
