@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Layout } from "@/components/layout/Layout";
@@ -19,6 +20,14 @@ const MobileDevelopment = () => {
   const { t } = useTranslation();
   return (
     <Layout>
+      <Helmet>
+        <title>Développement Mobile iOS & Android | DK Group Paris</title>
+        <meta name="description" content="Applications mobiles natives et cross-platform (React Native, Flutter) pour une expérience utilisateur exceptionnelle. iOS, Android, Paris." />
+        <link rel="canonical" href="https://dkgroupdigital.fr/mobile-development" />
+        <meta property="og:title" content="Développement Mobile iOS & Android | DK Group" />
+        <meta property="og:description" content="Applications mobiles natives et cross-platform (React Native, Flutter) pour une expérience utilisateur exceptionnelle." />
+        <meta property="og:url" content="https://dkgroupdigital.fr/mobile-development" />
+      </Helmet>
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-grid-pattern opacity-30" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-secondary/10 blur-[120px]" />

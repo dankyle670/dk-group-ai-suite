@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 import { Layout } from "@/components/layout/Layout";
 import { Section, SectionHeader } from "@/components/ui/Section";
@@ -15,6 +16,14 @@ const About = () => {
   const { t } = useTranslation();
   return (
     <Layout>
+      <Helmet>
+        <title>À propos de DK Group | Agence IA & Digital Paris</title>
+        <meta name="description" content="DK Group est une agence IA & digitale basée à Paris. Nous aidons les startups, PME et scale-ups à accélérer grâce à des systèmes intelligents et des flottes d'agents IA." />
+        <link rel="canonical" href="https://dkgroupdigital.fr/about" />
+        <meta property="og:title" content="À propos de DK Group | Agence IA & Digital Paris" />
+        <meta property="og:description" content="Agence IA & digitale basée à Paris. Nous aidons les startups, PME et scale-ups à accélérer grâce à des systèmes intelligents." />
+        <meta property="og:url" content="https://dkgroupdigital.fr/about" />
+      </Helmet>
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-grid-pattern opacity-30" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-primary/10 blur-[120px]" />

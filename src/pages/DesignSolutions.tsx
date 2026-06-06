@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Layout } from "@/components/layout/Layout";
@@ -19,6 +20,14 @@ const DesignSolutions = () => {
   const { t } = useTranslation();
   return (
     <Layout>
+      <Helmet>
+        <title>Design UI/UX & Branding — Identité de marque | DK Group</title>
+        <meta name="description" content="Design centré utilisateur, identité de marque et design systems pour renforcer votre présence digitale et convertir plus. Paris, France." />
+        <link rel="canonical" href="https://dkgroupdigital.fr/design-solutions" />
+        <meta property="og:title" content="Design UI/UX & Branding | DK Group" />
+        <meta property="og:description" content="Design centré utilisateur et identité de marque pour renforcer votre présence digitale et convertir plus." />
+        <meta property="og:url" content="https://dkgroupdigital.fr/design-solutions" />
+      </Helmet>
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-grid-pattern opacity-30" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-secondary/10 blur-[120px]" />

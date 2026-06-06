@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Layout } from "@/components/layout/Layout";
@@ -74,6 +75,14 @@ const Pricing = () => {
   const { t } = useTranslation();
   return (
     <Layout>
+      <Helmet>
+        <title>Tarifs Agents IA & Solutions Digitales | DK Group</title>
+        <meta name="description" content="Abonnements agents IA à partir de 99€/mois (Starter, Growth, Scale) et projets one-shot web, mobile, data et design. Prix flexibles selon votre croissance." />
+        <link rel="canonical" href="https://dkgroupdigital.fr/pricing" />
+        <meta property="og:title" content="Tarifs Agents IA & Solutions Digitales | DK Group" />
+        <meta property="og:description" content="Abonnements agents IA à partir de 99€/mois et projets one-shot. Des prix flexibles adaptés à votre croissance." />
+        <meta property="og:url" content="https://dkgroupdigital.fr/pricing" />
+      </Helmet>
       {/* Hero */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-grid-pattern opacity-30" />

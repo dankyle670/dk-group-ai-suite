@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Layout } from "@/components/layout/Layout";
@@ -62,6 +63,14 @@ const Contact = () => {
 
   return (
     <Layout>
+      <Helmet>
+        <title>Contacter DK Group — Paris | Réponse sous 24h</title>
+        <meta name="description" content="Parlons de votre projet IA, web, mobile ou data. Réponse sous 24h. Basé à Paris, DK Group intervient partout en France et à l'international." />
+        <link rel="canonical" href="https://dkgroupdigital.fr/contact" />
+        <meta property="og:title" content="Contacter DK Group | Paris" />
+        <meta property="og:description" content="Parlons de votre projet IA, web, mobile ou data. Réponse sous 24h. Basé à Paris." />
+        <meta property="og:url" content="https://dkgroupdigital.fr/contact" />
+      </Helmet>
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-grid-pattern opacity-30" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-primary/10 blur-[120px]" />

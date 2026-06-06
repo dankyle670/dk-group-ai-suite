@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Layout } from "@/components/layout/Layout";
@@ -19,6 +20,14 @@ const DataSolutions = () => {
   const { t } = useTranslation();
   return (
     <Layout>
+      <Helmet>
+        <title>Solutions Data & Analytics — ETL, BI, ML | DK Group</title>
+        <meta name="description" content="Data engineering, dashboards analytics et pipelines ETL pour transformer vos données en avantage business. Machine learning et BI sur mesure, Paris." />
+        <link rel="canonical" href="https://dkgroupdigital.fr/data-solutions" />
+        <meta property="og:title" content="Solutions Data & Analytics | DK Group" />
+        <meta property="og:description" content="Data engineering, dashboards analytics et pipelines ETL pour transformer vos données en avantage business." />
+        <meta property="og:url" content="https://dkgroupdigital.fr/data-solutions" />
+      </Helmet>
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-grid-pattern opacity-30" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-primary/10 blur-[120px]" />

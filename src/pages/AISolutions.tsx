@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Layout } from "@/components/layout/Layout";
@@ -88,6 +89,14 @@ const AISolutions = () => {
   const { t } = useTranslation();
   return (
     <Layout>
+      <Helmet>
+        <title>Solutions IA & Agents Intelligents | DK Group</title>
+        <meta name="description" content="Agents IA sur mesure pour automatiser vos ventes, marketing, support et ops. Systèmes intelligents qui travaillent 24/7 pour scaler vos opérations." />
+        <link rel="canonical" href="https://dkgroupdigital.fr/ai-solutions" />
+        <meta property="og:title" content="Solutions IA & Agents Intelligents | DK Group" />
+        <meta property="og:description" content="Agents IA sur mesure pour automatiser vos ventes, marketing, support et ops. Systèmes intelligents qui travaillent 24/7." />
+        <meta property="og:url" content="https://dkgroupdigital.fr/ai-solutions" />
+      </Helmet>
       {/* Hero */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-grid-pattern opacity-30" />

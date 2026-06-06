@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Layout } from "@/components/layout/Layout";
@@ -61,6 +62,14 @@ const DKAgents = () => {
   const { t } = useTranslation();
   return (
     <Layout>
+      <Helmet>
+        <title>DK Agents — Votre Workforce IA | Plateforme d'agents</title>
+        <meta name="description" content="Découvrez la plateforme DK Agents : agents IA spécialisés (sales, marketing, support, ops) prêts à déployer pour automatiser vos opérations 24/7." />
+        <link rel="canonical" href="https://dkgroupdigital.fr/dk-agents" />
+        <meta property="og:title" content="DK Agents — Votre Workforce IA" />
+        <meta property="og:description" content="Agents IA spécialisés prêts à déployer : sales, marketing, support, ops. Automatisez vos opérations 24/7." />
+        <meta property="og:url" content="https://dkgroupdigital.fr/dk-agents" />
+      </Helmet>
       {/* Hero */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-grid-pattern opacity-30" />
